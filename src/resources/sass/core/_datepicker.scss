@@ -1,0 +1,92 @@
+@import "variables";
+@import "theme-colors";
+
+.date-picker-input {
+
+  input {
+    padding: 10px 14px !important;
+    text-align: start;
+    color: var(--default-font-color);
+    border: none !important;
+    background-color: var(--form-control-bg) !important;
+
+    &:focus {
+      box-shadow: none;
+      border-color: var(--default-border-color) !important;
+    }
+  }
+
+  .input-group-text {
+    //z-index: 50;
+    width: 50px;
+    border: none !important;
+    background-color: var(--form-control-bg);
+
+    svg {
+      stroke-width: 1;
+      color: $brand-color;
+    }
+  }
+
+  .vc-popover-content-wrapper {
+    z-index: 21 !important;
+  }
+
+  .input-group {
+    border: 1px solid var(--default-border-color) !important;
+    border-radius: 5px;
+  }
+}
+
+.date-picker-input-group {
+  .input-group {
+    border-color: $brand-color !important;
+  }
+}
+
+.vc-popover-content {
+  &.vc-container {
+    border: none !important;
+    border-radius: $default-radius !important;
+    box-shadow: var(--default-box-shadow) !important;
+  }
+}
+
+.vc-container {
+  &.vc-is-dark {
+    background-color: var(--default-card-bg) !important;
+  }
+}
+
+.vc-nav-popover-container {
+  background-color: var(--default-card-bg) !important;
+  color: var(--default-font-color) !important;
+  border-color: var(--default-border-color) !important;
+
+  .vc-nav-title {
+    color: var(--default-font-color) !important;
+
+    &:hover {
+      background-color: var(--default-card-bg) !important;
+    }
+  }
+}
+
+.vc-is-dark .vc-nav-item:hover {
+  background-color: var(--base-color) !important;
+  color: var(--default-font-color) !important;
+}
+
+.date-filter {
+  .vc-popover-content {
+    margin-top: 5px !important;
+  }
+
+  .vc-container {
+    .vc-popover-caret {
+      &.align-left {
+        display: none !important;
+      }
+    }
+  }
+}

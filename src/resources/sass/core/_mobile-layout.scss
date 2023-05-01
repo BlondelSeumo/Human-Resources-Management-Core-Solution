@@ -1,0 +1,434 @@
+@import "variables";
+@import "theme-colors";
+
+@media (max-width: 575px) {
+  body, html {
+    font-size: $default-font-size-for-mobile;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  /*** Start mixins for mobile view ***/
+  @keyframes dropdownMenuAnimation {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -30px, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0px, 0);
+    }
+  }
+
+  .dropdownMenuAnimation {
+    animation-name: dropdownMenuAnimation;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+  }
+
+  @mixin mobile-filter-dropdown-menu {
+    position: fixed !important;
+    transform: inherit !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    border-radius: 0 !important;
+    will-change: initial !important;
+
+    @extend .dropdownMenuAnimation;
+  }
+
+  @mixin dropdown-menu-header {
+    display: block;
+    padding: 1rem 1.9rem;
+    background-color: $brand-color;
+
+    .title {
+      color: $white;
+      font-size: 14px;
+    }
+    svg {
+      color: $white;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @mixin mobile-filter-dropdown-action-wrapper {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: var(--default-box-shadow);
+
+    .col-12 {
+      padding: 0;
+
+      .btn {
+        width: 50%;
+        border-radius: 0;
+        padding: 1rem 1.2rem;
+
+        &.btn-clear {
+          background-color: var(--base-color);
+        }
+      }
+    }
+  }
+  /*** End mixins for mobile view ***/
+
+  .p-primary {
+    padding: $default-padding-margin-for-mobile !important;
+  }
+
+  .px-primary {
+    padding-right: $default-padding-margin-for-mobile !important;
+    padding-left: $default-padding-margin-for-mobile !important;
+  }
+
+  .py-primary {
+    padding-top: $default-padding-margin-for-mobile !important;
+    padding-bottom: $default-padding-margin-for-mobile !important;
+  }
+
+  .pt-primary {
+    padding-top: $default-padding-margin-for-mobile !important;
+  }
+
+  .pr-primary {
+    padding-right: $default-padding-margin-for-mobile !important;
+  }
+
+  .pt-primary {
+    padding-bottom: $default-padding-margin-for-mobile !important;
+  }
+
+  .pt-primary {
+    padding-left: $default-padding-margin-for-mobile !important;
+  }
+
+  .mt-primary {
+    margin-top: $default-padding-margin-for-mobile !important;
+  }
+
+  .mr-primary {
+    margin-right: $default-padding-margin-for-mobile !important;
+  }
+
+  .mb-primary {
+    margin-bottom: $default-padding-margin-for-mobile !important;
+  }
+
+  .ml-primary {
+    margin-left: $default-padding-margin-for-mobile !important;
+  }
+
+  .my-primary {
+    padding: $default-padding-margin-for-mobile 0 !important;
+  }
+
+  .content-wrapper {
+    padding: $main-content-wrapper-mobile-padding;
+  }
+
+  .navbar {
+    .navbar-menu-wrapper {
+      .navbar-nav {
+        .nav-item.dropdown {
+          .dropdown-menu {
+            &.navbar-dropdown {
+              position: fixed;
+              min-width: 100%;
+              border-radius: 0;
+
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*** Start Breadcrumbs Design for Mobile View ***/
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: 0.3rem;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    padding-right: 0;
+  }
+
+  .breadcrumb-item {
+    h4 {
+      max-width: 300px;
+    }
+  }
+  /*** End Breadcrumbs Design for Mobile View ***/
+
+  /*** Start Cards Design for Mobile View ***/
+  .card {
+    .card-body {
+      padding: 15px;
+    }
+  }
+  /*** End Cards Design for Mobile View ***/
+
+  /*** Start Tabs Design for Mobile View ***/
+  .vertical-tab {
+    .header-icon {
+      height: 80px;
+
+      .icon-position {
+        margin-top: 50px;
+      }
+    }
+
+    .tab-content {
+      h4 {
+        height: 80px;
+      }
+
+      hr {
+        margin: 0 -#{$default-padding-margin-for-mobile};
+      }
+    }
+  }
+  /*** End Tabs Design for Mobile View ***/
+
+  /*** Start Modals Design for Mobile View ***/
+  .modal-dialog {
+    margin: 0;
+    max-width: 100% !important;
+
+    &.modal-dialog-centered {
+      max-height: 100% !important;
+    }
+
+    .modal-content {
+      outline: 0;
+      display: flex;
+      position: relative;
+      pointer-events: auto;
+      flex-direction: column;
+      min-width: 100% !important;
+      min-height: 100% !important;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      background-clip: padding-box;
+      background-color: var(--modal-body-bg);
+    }
+  }
+
+  /*** Start Filters Design for Mobile View ***/
+  .btn-toggle-filters {
+    border: 0;
+    font-size: 95%;
+    padding: 0.5rem 0.7rem;
+    border-radius: 20px;
+    margin: 0 0 1.14rem 0;
+    color: $filter-btn-text-color;
+    background: var(--btn-filter-bg);
+    box-shadow: var(--default-box-shadow);
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .btn-filter {
+    &.btn-list-grid {
+      border-radius: 20px;
+    }
+  }
+
+  .filters-wrapper {
+    .single-filter {
+      &.column-filter {
+        .dropdown {
+          .btn-filter {
+            border-radius: 20px;
+          }
+
+          .dropdown-menu {
+            z-index: 1031;
+
+            @include mobile-filter-dropdown-menu;
+
+            .btn-dropdown-close {
+              @include dropdown-menu-header;
+            }
+
+            .filter-action-button-wrapper {
+              @include mobile-filter-dropdown-action-wrapper;
+            }
+          }
+        }
+      }
+    }
+
+    .mobile-filters-wrapper {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1031;
+      width: 100%;
+      padding: 15px;
+      background-color: var(--base-color);
+
+      .single-filter {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .dropdown {
+          .btn-filter {
+            width: 100%;
+            text-align: left;
+            font-size: 100%;
+            padding: 0.6rem 1.5rem;
+
+            .clear-icon {
+              cursor: pointer;
+              position: absolute;
+              top: 8px;
+              right: 20px;
+
+              svg {
+                width: 22px;
+                height: 22px;
+              }
+            }
+          }
+
+          .dropdown-menu {
+            @include mobile-filter-dropdown-menu;
+
+            .btn-dropdown-close {
+              @include dropdown-menu-header;
+            }
+
+            .filter-action-button-wrapper {
+              @include mobile-filter-dropdown-action-wrapper;
+            }
+
+            //@extend .dropdownAnimation;
+          }
+        }
+
+        &.calendar-root {
+          .input-date {
+            font-size: 100%;
+            position: relative;
+            padding: 0.6rem 1.5rem;
+
+            .clear-icon {
+              cursor: pointer;
+              position: absolute;
+              top: 8px;
+              right: 20px;
+
+              svg {
+                width: 22px;
+                height: 22px;
+              }
+            }
+          }
+
+          .calendar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin-top: 0;
+            padding-top: 0 !important;
+            border-radius: 0;
+
+            .btn-dropdown-close {
+              @include dropdown-menu-header;
+            }
+
+            .calendar-wrap {
+              width: 100%;
+              padding: 10px 10px 10px 10px;
+
+              .calendar_month_left, .calendar_month_right {
+                margin: 0;
+                width: 50%;
+              }
+            }
+
+            .filter-action-button-wrapper {
+              padding: 0;
+              @include mobile-filter-dropdown-action-wrapper;
+            }
+
+            @extend .dropdownMenuAnimation;
+          }
+        }
+
+        &.search-filter-dropdown {
+          .dropdown {
+            .btn-filter {
+              padding: 0.6rem 1.5rem !important;
+            }
+          }
+        }
+      }
+
+      @extend .dropdownMenuAnimation;
+    }
+
+    //Dropdown menu filter mobile-view
+    .dropdown-menu-filter {
+      .menu-filter-btn {
+        width: 100%;
+        text-align: left;
+        font-size: 100%;
+        padding: 0.6rem 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .dropdown {
+        .dropdown-menu {
+          @include mobile-filter-dropdown-menu;
+
+          .btn-dropdown-close {
+            @include dropdown-menu-header;
+          }
+        }
+      }
+    }
+  }
+  /*** End Filters Design for Mobile View ***/
+
+  /*** Chips With Dropdown Search & Select ***/
+  .chips-dropdown-menu {
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+
+    .dropdown-item {
+      white-space: initial;
+    }
+  }
+}

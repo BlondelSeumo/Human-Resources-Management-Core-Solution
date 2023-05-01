@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <title>PayDay - HRM Application.</title>
+
+    <link rel="shortcut icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+
+    <!-- Bootstrap4.6.0 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Documentation CSS -->
+    <link rel="stylesheet" href="css/documentation.css">
+</head>
+
+<body>
+<div class="d-none" id="top"></div>
+
+<div class="wrapper">
+
+
+    <div class="sidebar-wrapper">
+        <div id="menu-toggle" class="toggle-sidebar">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="logo-wrapper">
+            <img src="images/logo.png" class="img-fluid" width="200" alt="">
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <!--Introduction-->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Introduction</a>
+                </li>
+
+                <!--Installation-->
+                <li class="nav-item active">
+                    <a href="server-requirement.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Installation
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="server-requirement.html" class="sub-menu-link js-page-scrolling">Server
+                                Requirements</a>
+                        </li>
+                        <li class="sub-menu-item active">
+                            <a href="installation.html" class="sub-menu-link js-page-scrolling">How to Install</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="installation.html" class="sub-menu-link js-page-scrolling">Root Domain</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="install_sub_folder.html" class="sub-menu-link js-page-scrolling">
+                                        Sub Folder
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item active">
+                                    <a href="install_local_environment.html" class="sub-menu-link js-page-scrolling">
+                                        Local Environment
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="common-errors-issues.html" class="sub-menu-link js-page-scrolling">
+                                Common Errors & Issues
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Important settings-->
+                <li class="nav-item">
+                    <a href="important-settings.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Important settings
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item">
+                            <a href="#delivery-settings" class="sub-menu-link js-page-scrolling">
+                                Delivery settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#smtp" class="sub-menu-link js-page-scrolling">
+                                        SMTP
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#mailgun" class="sub-menu-link js-page-scrolling">
+                                        Mailgun
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#amazon-ses" class="sub-menu-link js-page-scrolling">
+                                        Amazon SES
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#scheduler-queue" class="sub-menu-link js-page-scrolling">
+                                Scheduler & queue
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Instruction Guide-->
+                <li class="nav-item">
+                    <a href="instruction-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Instruction Guide
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item active">
+                            <a href="#appDashboard" class="sub-menu-link js-page-scrolling">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appJobDesk" class="sub-menu-link js-page-scrolling">
+                                Job Desk
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appEmployee" class="sub-menu-link js-page-scrolling">
+                                Employee
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appLeave" class="sub-menu-link js-page-scrolling">
+                                Leave
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAttendance" class="sub-menu-link js-page-scrolling">
+                                Attendance
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appPayroll" class="sub-menu-link js-page-scrolling">
+                                Payroll
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAdministration" class="sub-menu-link js-page-scrolling">
+                                Administration
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#userAndRolesSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Users & Roles
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appWorkshift" class="sub-menu-link js-page-scrolling">
+                                        Work Shift
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appDepartment" class="sub-menu-link js-page-scrolling">
+                                        Department
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appHoliday" class="sub-menu-link js-page-scrolling">
+                                        Holiday
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appSettings" class="sub-menu-link js-page-scrolling">
+                                Settings
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#settingsAppSettings" class="sub-menu-link js-page-scrolling">
+                                App Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#generalSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        General
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#deliverySettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Email Setup
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#notificationSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Notification
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appLeaveSetting" class="sub-menu-link js-page-scrolling">
+                                Leave Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveTypeSetting" class="sub-menu-link js-page-scrolling">
+                                        Leave type
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveAllowanceSetting" class="sub-menu-link js-page-scrolling">
+                                        Allowance Policy
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveApproveSetting" class="sub-menu-link js-page-scrolling">
+                                        Approval
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAttendanceSetting" class="sub-menu-link js-page-scrolling">
+                                Attendance Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendancePreferencesSetting" class="sub-menu-link js-page-scrolling">
+                                        Preferences
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendanceDefinitionSetting" class="sub-menu-link js-page-scrolling">
+                                        Definition
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appPayrollSetting" class="sub-menu-link js-page-scrolling">
+                                Payroll Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollDefaultSetting" class="sub-menu-link js-page-scrolling">
+                                        Default Payrun
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollBadgeSetting" class="sub-menu-link js-page-scrolling">
+                                        Badge Value
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollAudienceSetting" class="sub-menu-link js-page-scrolling">
+                                        Manage Audience
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Development Guide-->
+                <li class="nav-item">
+                    <a href="development-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Development Guide
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item">
+                            <a href="#languageSettings" class="sub-menu-link js-page-scrolling">
+                                Language Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#setLanguage" class="sub-menu-link js-page-scrolling">
+                                        Set Language
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#updateLanguage" class="sub-menu-link js-page-scrolling">
+                                        Update Language
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#environmentConfiguration" class="sub-menu-link js-page-scrolling">
+                                Environment configuration
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#addNewPage" class="sub-menu-link js-page-scrolling">
+                                Add new page
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#changeColorAndDesign" class="sub-menu-link js-page-scrolling">
+                                Change color & design
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Upgrade Guide-->
+                <li class="nav-item">
+                    <a href="upgrade.html" class="nav-link">Upgrade Guide</a>
+                </li>
+
+                <!--Change Log-->
+                <li class="nav-item">
+                    <a href="change-log.html" class="nav-link">
+                        Change Log
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-content-wrapper">
+        <section class="scrollspy-section" id="usageOfAppLevel">
+            <div class="scrollspy-section mb-5" id="dashboard">
+
+                <div id="dashboard_id" class="scrollspy-section mb-5" data-for="dashboard">
+                    <h3>Installation in Local Environment</h3>
+
+                    <p>Please follow the procedure.</p>
+                    <!-- Filter Job post-->
+                    <ol>
+                        <li>
+                            <h6>Make sure you have met environment requirements.</h6>
+                            <ul>
+                                <li>PHP Version == 8.0 or 8.1</li>
+                                <li>MySql Version >= 5.6+</li>
+                                <li>Maria DB Version >= 10.2+</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h6>Now, download the zipped file from CodeCanyon.</h6>
+                        </li>
+                        <li>
+                            <h6>Unzip the zipped file. Inside the unzipped folder you will get two folders "Documentation" and
+                                "upload"</h6>
+                        </li>
+                        <li>
+                            <h6>Move all the items from the "upload" folder to local directory from where you want to run the
+                                application</h6>
+                        </li>
+                        <li>
+                            <h6>Open the folder in the Editor (phpstorm, vscode etc.)</h6>
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <p>Go to src folder and open .env file: update <code>APP_INSTALLED=true</code></p>
+                        </li>
+                        <li>
+                            <span>Update the database credentials in the .env file.</span><br>
+                            <p>
+                                <span class="hljs-attr">DB_CONNECTION</span>=mysql<br>
+                                <span class="hljs-attr">DB_HOST</span>=127.0.0.1/localhost<br>
+                                <span class="hljs-attr">DB_PORT</span>=3306<br>
+                                <span class="hljs-attr">DB_DATABASE</span>=your_database_name<br>
+                                <span class="hljs-attr">DB_USERNAME</span>=your_database_user_name<br>
+                                <span class="hljs-attr">DB_PASSWORD</span>=your_database_password<br>
+                            </p>
+                        </li>
+                        <li>
+                            <span>Now navigate to <code>src</code> folder in command line and run the below commands</span><br>
+                            <ul>
+                                <li><code>php artisan <span class="hljs-keyword">optimize:clear</span></code></li>
+                                <li><code>php artisan <span class="hljs-keyword">migrate:fresh --seed</span></code></li>
+                                <li><code>php artisan <span class="hljs-keyword">storage:link</span></code></li>
+                            </ul>
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <span>In this <code>src</code> folder open another terminal and run the below command in order to complete all the queued jobs generated in the application</span><br>
+                            <code>php artisan <span class="hljs-keyword">schedule:work</span></code><br>
+                        </li>
+                        <br>
+
+                        <li>
+                            <span>Now go back to the <code>root</code> directory of your application and run the below command on a terminal</span><br>
+                            <code>php <span class="hljs-keyword">-S localhost:8000 -t ./</span></code><br>
+
+                        </li>
+                        <br>
+                        <li>
+                            <p>Then you will get a URL in terminal: ex (http://127.0.0.1:8000)</p>
+                        </li>
+
+                        <li>
+                            <p>Copy and paste the url on a browser.</p>
+                        </li>
+                        <li>
+                            <p>Now, complete the installation process. And your application should be ready to use locally.</p>
+                        </li>
+
+                    </ol>
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+</div>
+
+<a class="js-page-scrolling back-to-top" href="#top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-up"
+         viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+    </svg>
+</a>
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+<script src="js/documentation.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{
+    "id" : "string",
+    "name": "String",
+    "datatableWrapper": "Boolean",
+    "showManageColumn": "Boolean",
+    "columns": [
+        {
+            "title": "String",
+            "key": "String",
+            "type": "String",
+            "url": "String",
+            "sortAble": "Boolean",
+            "isVisible": "Boolean"
+        }
+    ],
+    "showHeader": "Boolean",
+    "url": "String",
+    "showSummary": "Boolean",
+    "orderBy": "String",
+    "numberFormat": "Array",
+    "dateFormat": "Array",
+    "rightAlign": "Array",
+    "summation": "Array",
+    "summationKey": "String",
+    "showFilter": "Boolean",
+    "datatableType": "default/cardView",
+    "showSearch": "Boolean",
+    "filters": [
+        {
+            "title": "date",
+            "type": "range-picker",
+            "key": "date",
+            "option": ["today", "thisMonth", "last7Days", "nextYear"]
+        },
+        {
+            "title": "sending rate",
+            "type": "range-filter",
+            "key": "sending rate"
+        },
+        {
+            "title": "status",
+            "type": "checkbox",
+            "key": "status",
+            "option": ["active", "subscribed", "multiple word", "invited", "adfsd", "adsfdsf"]
+        },
+        {
+            "title": "list with segment",
+            "type": "radio",
+            "key": "list with segment",
+            "option": ["with segment", "without segment"]
+        },
+        {
+            "title": "search & select",
+            "type": "drop-down-filter",
+            "key": "search select",
+            "option": ["asdsdas uhuhuihuuhuih ", "loppesasd ububub", "poop", "banana", "apple"]
+        }
+    ],
+    "showAction" : "Boolean",
+    "actionType" : "default/dropdown",
+    "actions": "Array",
+    "paginationType": "loadMore/pagination",
+    "rowLimit": 10,
+    "responsive": "Boolean"
+}
+

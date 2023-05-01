@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <title>PayDay - HRM Application.</title>
+
+    <link rel="shortcut icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+
+    <!-- Bootstrap4.6.0 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Documentation CSS -->
+    <link rel="stylesheet" href="css/documentation.css">
+</head>
+
+<body>
+<div class="d-none" id="top"></div>
+
+<div class="wrapper">
+    <div class="sidebar-wrapper">
+        <div id="menu-toggle" class="toggle-sidebar">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="logo-wrapper">
+            <img src="images/logo.png" class="img-fluid" width="200" alt="">
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <!--Introduction-->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Introduction</a>
+                </li>
+
+                <!--Installation-->
+                <li class="nav-item">
+                    <a href="server-requirement.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Installation
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item">
+                            <a href="server-requirement.html" class="sub-menu-link js-page-scrolling">Server
+                                Requirements</a>
+                        </li>
+                        <li class="sub-menu-item active">
+                            <a href="installation.html" class="sub-menu-link js-page-scrolling">How to Install</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item active">
+                                    <a href="installation.html" class="sub-menu-link js-page-scrolling">Root</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="install_sub_folder.html" class="sub-menu-link js-page-scrolling">
+                                        Sub Folder
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="common-errors-issues.html" class="sub-menu-link js-page-scrolling">
+                                Common Errors & Issues
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Important settings-->
+                <li class="nav-item">
+                    <a href="important-settings.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Important settings
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item">
+                            <a href="#delivery-settings" class="sub-menu-link js-page-scrolling">
+                                Delivery settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#smtp" class="sub-menu-link js-page-scrolling">
+                                        SMTP
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#mailgun" class="sub-menu-link js-page-scrolling">
+                                        Mailgun
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#amazon-ses" class="sub-menu-link js-page-scrolling">
+                                        Amazon SES
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#scheduler-queue" class="sub-menu-link js-page-scrolling">
+                                Scheduler & queue
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Instruction Guide-->
+                <li class="nav-item active">
+                    <a href="instruction-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Instruction Guide
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item active">
+                            <a href="#appDashboard" class="sub-menu-link js-page-scrolling">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appJobDesk" class="sub-menu-link js-page-scrolling">
+                                Job Desk
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appEmployee" class="sub-menu-link js-page-scrolling">
+                                Employee
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appLeave" class="sub-menu-link js-page-scrolling">
+                                Leave
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAttendance" class="sub-menu-link js-page-scrolling">
+                                Attendance
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appPayroll" class="sub-menu-link js-page-scrolling">
+                                Payroll
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAdministration" class="sub-menu-link js-page-scrolling">
+                                Administration
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#userAndRolesSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Users & Roles
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appWorkshift" class="sub-menu-link js-page-scrolling">
+                                        Work Shift
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appDepartment" class="sub-menu-link js-page-scrolling">
+                                        Department
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appHoliday" class="sub-menu-link js-page-scrolling">
+                                        Holiday
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appAnnouncement" class="sub-menu-link js-page-scrolling">
+                                        Announcement
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appSettings" class="sub-menu-link js-page-scrolling">
+                                Settings
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#settingsAppSettings" class="sub-menu-link js-page-scrolling">
+                                App Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#generalSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        General
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#deliverySettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Email Setup
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#notificationSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Notification
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appLeaveSetting" class="sub-menu-link js-page-scrolling">
+                                Leave Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveTypeSetting" class="sub-menu-link js-page-scrolling">
+                                        Leave type
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveAllowanceSetting" class="sub-menu-link js-page-scrolling">
+                                        Allowance Policy
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveApproveSetting" class="sub-menu-link js-page-scrolling">
+                                        Approval
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAttendanceSetting" class="sub-menu-link js-page-scrolling">
+                                Attendance Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendancePreferencesSetting" class="sub-menu-link js-page-scrolling">
+                                        Preferences
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendanceDefinitionSetting" class="sub-menu-link js-page-scrolling">
+                                        Definition
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendanceGeolocationSetting" class="sub-menu-link js-page-scrolling">
+                                        Geolocation & IP
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appPayrollSetting" class="sub-menu-link js-page-scrolling">
+                                Payroll Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollDefaultSetting" class="sub-menu-link js-page-scrolling">
+                                        Default Payrun
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollBadgeSetting" class="sub-menu-link js-page-scrolling">
+                                        Badge Value
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollAudienceSetting" class="sub-menu-link js-page-scrolling">
+                                        Manage Audience
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appImport" class="sub-menu-link js-page-scrolling">
+                                Import
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appEmployeesImport" class="sub-menu-link js-page-scrolling">
+                                        Employees Import
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendancesImport" class="sub-menu-link js-page-scrolling">
+                                        Attendance Import
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appExport" class="sub-menu-link js-page-scrolling">
+                                Export
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendanceExport" class="sub-menu-link js-page-scrolling">
+                                        Attendance Export
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Development Guide-->
+                <li class="nav-item">
+                    <a href="development-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Development Guide
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item">
+                            <a href="#languageSettings" class="sub-menu-link js-page-scrolling">Language Settings</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#setLanguage" class="sub-menu-link js-page-scrolling">Set Language</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#updateLanguage" class="sub-menu-link js-page-scrolling">Update
+                                        Language</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#environmentConfiguration" class="sub-menu-link js-page-scrolling">Environment
+                                configuration</a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#addNewPage" class="sub-menu-link js-page-scrolling">Add new page</a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#changeColorAndDesign" class="sub-menu-link js-page-scrolling">Change color &
+                                design</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Upgrade Guide-->
+                <li class="nav-item">
+                    <a href="upgrade.html" class="nav-link">Upgrade Guide</a>
+                </li>
+
+                <!--Change Log-->
+                <li class="nav-item">
+                    <a href="change-log.html" class="nav-link">Change Log</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-content-wrapper">
+        <section class="scrollspy-section" id="usageOfAppLevel">
+
+            <div class="scrollspy-section mb-5" id="appDashboard">
+                <h4>
+                    Dashboard
+                </h4>
+                <p>
+                    View an overview of your application here. You can find two different dashboard from admin view and
+                    general employee view,
+                </p>
+                <h6>In Employee Dashboard</h6>
+                <ul>
+                    <li>View your <span class="font-weight-bold">Punch In</span> and <span class="font-weight-bold">Punch Out</span>
+                        summery.
+                    </li>
+                    <li>View your monthly time log.</li>
+                    <li>View your available leave and total summery of it.</li>
+                    <li>View any important announcement from manager or admin.</li>
+                </ul>
+                <img src="images/dashboard/employee_dashboard.png" class="img-thumbnail mb-3" alt="">
+
+                <h6>In Admin Dashboard</h6>
+                <ul>
+                    <li>View total employee number, total department, leave request and on leave employee number</li>
+                    <li>View your employee statistics based on their statuses</li>
+                    <li>View how many employees are working and their attendance behavior in one chart</li>
+                </ul>
+                <img src="images/dashboard/admin_dashboard.png" class="img-thumbnail mb-3" alt="">
+
+                <h6>Punch In</h6>
+                <p>Here employee can give attendance by just clicking Punch In button.</p>
+                <img src="images/attendance/punch_in_with_geo.png" class="img-thumbnail mb-3" alt="">
+                <h6>Punch Out</h6>
+                <p>By clicking Punch Out button employee exits his attendance.</p>
+                <img src="images/attendance/punch_out_with_geo.png" class="img-thumbnail mb-3" alt="">
+
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appJobDesk">
+                <h4>
+                    Job Desk
+                </h4>
+                <p>
+                    Here you can find all of job related in formation and summery in just one place.
+                    In short this is a job profile for every employee.
+                </p>
+                <img src="images/job_desk/job_desk.png" class="img-thumbnail mb-3" alt="">
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appEmployee">
+                <h4>
+                    Employee
+                </h4>
+                <p>
+                    You can manage all your employees here. You can view details of them
+                    and do different actions like assign leave or attendance, add salary, joining date and much more.
+                </p>
+                <img src="images/employee/all_employees.png" class="img-thumbnail mb-3" alt="">
+                <p>
+                    From the <span class="font-weight-bold">Invite Employee</span> button right corner of the
+                    screen you can invite any employee.
+                </p>
+                <img src="images/employee/invite_employee.png" class="img-thumbnail mb-3" alt="">
+                <p>
+                    In the <span class="font-weight-bold">View Details</span> option you can find every
+                    details of an employee. You can also view different module's
+                    summery and do related action on that employee right this place.
+                </p>
+                <img src="images/employee/employee_details.png" class="img-thumbnail mb-3" alt="">
+                <p>
+                    There are also two submodule <span class="font-weight-bold">Designation</span> and
+                    <span class="font-weight-bold">employment Status</span> to help labeled the employees.
+                </p>
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appLeave">
+                <h4>
+                    Leave
+                </h4>
+                <p>
+                    In this option you can view the current leave status,
+                    leave request, leave summery and calendar view. An employee can apply for leave
+                    based on the available leave he/she has. And according to permission you can
+                    accept or reject leave requests. You can also assign leave to an employee in this module.
+                </p>
+                <h5>How Leave Works:</h5>
+                <p>
+                    By default, Leave will start from the month of January and end in December of each year.
+                    You can change the "leave start month" from the Leave Settings > Allowance Policy.
+                </p>
+                <p>
+                    You have 12 days of leave allowance per year. It will count from the month of January.
+                    That means leave per month you have got: 12 days/12 months = 1 day/month.
+                </p>
+                <p>
+                    <span class="font-weight-bold">Example:</span> If you have installed the application in November month and set 12 days leave allowance in this year.
+                    So 2 months left of this 2021 year, employees will get 2 months (November and December) leave days. So 1 x 2 months = 2 days leave will get for the 2 (November and December) months.
+                </p>
+                <p>
+                    About allow monthly earning leave, if you enable the allow monthly earning from Leave settings,
+                    then employees who have to earn leave per month and get a earning rate field in the leave allowance.
+                </p>
+                <div class="alert alert-warning text-dark">
+                    N.B: If you add a new leave type, It will take one day to get enlisted and show in leave types. For example,
+                    you add a leave type today and can see that tomorrow due to the scheduler (Cron Job). FYI, Any type of change will be effective on the next day.
+                </div>
+
+                <b>FYI: If you edit any employee's leave from the employee details module, then it will be added to his earned leave immediately and
+                the leave number will not change according to the leave settings until the next leave year.</b>
+                <img src="images/leave/edit_leave_allowance.png" class="img-thumbnail mb-3" alt="">
+
+
+                <ul>
+                    <li><h5>Leave Module</h5></li>
+                    <li>
+                        Assign leave
+                        <img src="images/leave/assign_leave.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        Request leave
+                        <img src="images/leave/request_leave.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        View leave status
+                        <img src="images/leave/leave_status.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        View leave request
+                        <img src="images/leave/leave_request.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        View leave summery
+                        <img src="images/leave/leave_summery.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        View leave calendar
+                        <img src="images/leave/leave_calendar.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appAttendance">
+                <h4>
+                    Attendance
+                </h4>
+                <p>
+                    This is one of the most important feature of the application. As the app tracks
+                    every employee's attendance based on
+                    <span class="font-weight-bold">Punch In</span> and
+                    <span class="font-weight-bold">Punch Out</span>,
+                    here you can find the daily attendance log of the employees. You can request, accept
+                    or reject attendance and also can add attendance to a employee.
+                </p>
+                <ul>
+                    <li>
+                        Add attendance
+                        <img src="images/attendance/add_attendance.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        Request attendance
+                        <img src="images/attendance/request_attendance.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        View daily log
+                        <img src="images/attendance/daily_log_geo.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        View attendance request
+                        <img src="images/attendance/attendance_request.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        View attendance details
+                        <img src="images/attendance/attendance_details.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        View attendance summery
+                        <img src="images/attendance/attendance_summery.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appPayroll">
+                <h4>
+                    Payroll
+                </h4>
+                <p>
+                    This is the most desired functionality of the app for any employee.
+                    Here you can calculate and generate a employee's payslip full dynamically. You can
+                    manage beneficiary for every employee and also can set the payrun setting on how you want
+                    to generate your payslip. You can run default payrun to generate monthly payslip or also
+                    can run manual payrun with customized date. After generate payslip you can send
+                    it to the employee as bulk action or can send individually. You can view the payslip and also can
+                    edit before you send.
+                </p>
+                <ul>
+                    <li>
+                        <h6>Beneficiary</h6>
+                        Create beneficiary badge in order to add it to employee's payslip.
+                        <img src="images/payroll/beneficiary_badge.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        <h6>Payrun</h6>
+                        Run default payrun which will automatically calculate and generate last month
+                        payslip according to the settings.
+                        <img src="images/payroll/default_payrun.png" class="img-thumbnail mb-3" alt="">
+                        You can also run manual payrun to generate customized payslip for the employees.
+                        <img src="images/payroll/manual_payrun.png" class="img-thumbnail mb-3" alt="">
+                        <h6>The salary will be calculated depending on generating type.</h6>
+                        <ul>
+                            <li>
+                                <h6>With <b class="font-weight-bold">Hour</b></h6>
+                                First, <b class="font-weight-bold">Salary per hour</b> (Working hour) = Total Salary / Total Working hour (scheduled hour of that month)
+                                <br>
+                                Then, <b class="font-weight-bold">Employee salary</b>  = Total working hour * Salary per hour
+                            </li>
+                            <li>
+                                <h6>With <b class="font-weight-bold">Daily Log</b></h6>
+                                First, <b class="font-weight-bold">Salary per day</b> (Working day) = Total Salary / Total Working day (scheduled day of that month)
+                                <br>
+                                Then, <b class="font-weight-bold">Employee salary</b>  = Total working day * Salary per day
+                            </li>
+                            <li>
+                                <h6>With <b class="font-weight-bold">None</b></h6>
+                                Generates employee salary without checking any attendance and leave.
+                            </li>
+                        </ul>
+                        <h6><b class="font-weight-bold">S.N: </b>If the overtime is disabled from the payroll settings,
+                            then the system will ignore the extra working hour/day from the total working hour/day. And it
+                        won't count the total working hour/day more than scheduled hour/day.</h6>
+                    </li>
+                    <li>
+                        <h6>Payslip</h6>
+                        View all payslip, download PDF and do different actions.
+                        <img src="images/payroll/payslips.png" class="img-thumbnail mb-3" alt="">
+                        You can view the browser view as well as PDF view
+                        <img src="images/payroll/view_payslip.png" class="img-thumbnail mb-3" alt="">
+                        You can also edit payslip form here
+                        <img src="images/payroll/edit_payslip.png" class="img-thumbnail mb-3" alt="">
+                        Send individual or bulk payslip form here.
+                        <img src="images/payroll/send_payslip.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        <h6>Summery</h6>
+                        View payroll summery here
+                        <img src="images/payroll/payroll_summery.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appAdministration">
+                <h4>
+                    Administration
+                </h4>
+                <p>
+                    As the title describes, this part has some functionality which belongs to administration
+                    that helps to run the application more efficiently.
+                </p>
+                <ul>
+                    <li>
+                        <div class="scrollspy-section mb-5" id="userAndRolesSettingsAppLevel">
+                            <h5>
+                                Users & Roles
+                            </h5>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Users and Roles is an important feature in any application. You may need
+                                        different roles for different job.
+                                    </p>
+                                    <p>
+                                        By default there are four role available to manage the app.
+                                    </p>
+                                    <ol>
+                                        <li><span class="font-weight-bold">App Admin:</span> Can access and manage the
+                                            whole app.
+                                        </li>
+                                        <li><span class="font-weight-bold">Manager:</span> Has all permission manage the
+                                            whole app.
+                                        </li>
+                                        <li><span class="font-weight-bold">Department Manager:</span> Has permission to
+                                            manage only his/her department of the app.
+                                        </li>
+                                        <li><span class="font-weight-bold">Employee:</span> Has limited permission to be
+                                            an employee of the organization.
+                                        </li>
+                                    </ol>
+                                    <img src="images/administration/user_role.png" class="img-thumbnail mb-3" alt="">
+                                </li>
+<!--                                <li>-->
+<!--                                    <p>-->
+<!--                                        Click on <b class="font-weight-600">Add Role</b>, It will open a modal which-->
+<!--                                        requires-->
+<!--                                        Role name and permissions for that role-->
+<!--                                    </p>-->
+<!--                                    <img src="images/administration/add_role.png" class="img-thumbnail mb-3" alt="">-->
+<!--                                </li>-->
+                                <li>
+                                    <p>
+                                        You can manage users of any role by clicking on <b class="font-weight-600">Manage
+                                        User</b> of that specific role from <b class="font-weight-600">Action</b>
+                                        column. Except Department Manager.
+                                    </p>
+                                    <img src="images/administration/manage_users.png" class="img-thumbnail mb-3" alt="">
+                                </li>
+                                <li>
+                                    <p>
+                                        You can manage permissions of Manager role by clicking on
+                                        <b class="font-weight-600">Manage</b> button from "Permission"
+                                        column.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Click on <b class="font-weight-600">Invite User</b>,
+                                        It will open a modal that requires
+                                        user email, and role that will be assigned to that user. Invited user will get an
+                                        confirmation email with a link. That link will redirect to a page where user can
+                                        signup and set their basic information.
+                                    </p>
+                                    <img src="images/administration/invite_user.png" class="img-thumbnail mb-3" alt="">
+                                </li>
+                                <li>
+                                    <p>
+                                        You can change user status, manage roles, edit and delete of specific users.
+                                    </p>
+                                    <img src="images/administration/user_actions.png" class="img-thumbnail mb-3" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="scrollspy-section mb-5" id="appWorkshift">
+                            <h5>
+                                Work Shift
+                            </h5>
+                            <p>
+                                This is another important feature to manage your time-schedule and
+                                maintain your workflow. You can create several work-shifts and assign to
+                                any employees or departments. At the starting point of the app
+                                you must add a work shift and that will behave like the default work shift
+                                of the application.
+                            </p>
+                            <img src="images/administration/workshift.png" class="img-thumbnail mb-3" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="scrollspy-section mb-5" id="appDepartment">
+                            <h5>
+                                Department
+                            </h5>
+                            <p>
+                                Like any other organization you might need several department to manage
+                                the work of your organization. So here you can create the departments as
+                                you need and assign a work shift and a manager to be in charge of that department.
+                            </p>
+                            <img src="images/administration/department.png" class="img-thumbnail mb-3" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="scrollspy-section mb-5" id="appHoliday">
+                            <h5>
+                                Holiday
+                            </h5>
+                            <p>
+                                Here you can create the holidays. And that's it. You can make the holiday
+                                repeat annually when creating and it will automatic make the next year's
+                                same date as a holiday.
+                            </p>
+                            <img src="images/administration/holiday.png" class="img-thumbnail mb-3" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="scrollspy-section mb-5" id="appAnnouncement">
+                            <h5>
+                                Announcement
+                            </h5>
+                            <p>
+                                Here you can make any announcement for any specific department or for all employees.
+                            </p>
+                            <img src="images/administration/announcement.png" class="img-thumbnail mb-3" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="scrollspy-section mb-3" id="appSettings">
+                <h4>
+                    Settings
+                </h4>
+                <p>
+                    For the efficiency and better user experience of the application we offer some
+                    custom settings options for the user. Here you can set different type of settings
+                    based on the need of your organization.
+                </p>
+            </div>
+
+            <div class="scrollspy-section mb-5" id="settingsAppSettings">
+                <h4>
+                    Application settings
+                </h4>
+                <p>
+                    Settings related settings are listed bellow
+                </p>
+
+                <ul>
+                    <li>
+                        <div class="scrollspy-section mb-5" id="generalSettingsAppLevel">
+                            <h5>
+                                General settings
+                            </h5>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Go to "Settings" > "App Settings" > "General"
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        You can set your <b class="font-weight-600">Company name</b>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b class="font-weight-600">Company logo</b> is used in you application. Select
+                                        image of
+                                        your logo.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Upload an icon as <b class="font-weight-600">Company icon</b> of the
+                                        application.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Upload your <b class="font-weight-600">Company banner</b> of the application.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Change suitable <b class="font-weight-600">Language</b> for application.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Set <b class="font-weight-600">Address Details</b>
+                                        of your company
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Set <b class="font-weight-600">Date</b> and <b class="font-weight-600">Time</b>
+                                        format
+                                        and <b class="font-weight-600">Timezone</b> the way you want to see date/time in
+                                        your
+                                        application.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b class="font-weight-600">Decimal separator</b>, <b class="font-weight-600">Thousand
+                                        separator</b>, <b class="font-weight-600">Number of decimal</b> also can be set.
+                                    </p>
+                                    <img src="images/settings/general.png" class="img-thumbnail mb-3" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="scrollspy-section mb-5" id="deliverySettingsAppLevel">
+                            <h5>
+                                Mail settings
+                            </h5>
+                            <p>
+                                App level configuration will be used for app related processing. For example inviting
+                                user,
+                                password reset email, Notification etc.
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Go to "Settings" > "App Settings" > "Email Setup"
+                                    </p>
+                                    <img src="images/settings/mail.png" class="img-thumbnail mb-3" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="scrollspy-section mb-5" id="notificationSettingsAppLevel">
+                            <h5>
+                                Notification settings
+                            </h5>
+                            <ul>
+                                <li>
+                                    <p>
+                                        You can update settings from here and also can update the template of
+                                        notification. You have the following options.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                You can set channels where the notification will send.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                You can set / choose users who will be notified on selected events.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                You can set / choose roles to set these audiences under that roles to get
+                                                notified.
+                                            </p>
+                                            <img src="images/settings/notification_audience.png" class="img-thumbnail mb-3" alt="">
+                                        </li>
+                                        <li>
+                                            <p>
+                                                You can set up the template for the notification by clicking the <span class="font-weight-bold">Update</span> Button
+                                            </p>
+                                            <img src="images/settings/template_edit.png" class="img-thumbnail mb-3" alt="">
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        When updating template to insert tag into template you have to click on the tag
+                                        to
+                                        insert. But
+                                        for something like url or image you have add them from editor menu. From above
+                                        screenshot if you
+                                        want to add the {resource_url} tag to the template. Click on the link option and
+                                        add it
+                                        in
+                                        second input. Add your link header in first input. For {app_logo}, Click on
+                                        picture from
+                                        editor
+                                        menu and add this to the input box
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appLeaveSetting">
+                <h4>
+                    Leave settings
+                </h4>
+                <p>
+                    In order to manage the leaves of your organization we developed some leave setting
+                    so that you can specify how and what way you want to give leave to an employee.
+                </p>
+                <ul>
+                    <li class="scrollspy-section mb-5" id="appLeaveTypeSetting">
+                        <h5>Lave Type</h5>
+                        <p>Here you can create leave type to specify the kind of leave the employees will get.</p>
+                        <img src="images/settings/leave/leave_type.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li class="scrollspy-section mb-5" id="appLeaveAllowanceSetting">
+                        <h5>Allowance Policy</h5>
+                        <p>In this setting you can specify whoever will get leave allowance from which month.</p>
+                        <img src="images/settings/leave/allowance_policy.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li class="scrollspy-section mb-5" id="appLeaveApproveSetting">
+                        <h5>Approval</h5>
+                        <p>In this setting you can specify who and how can a employee's leave request will be
+                            reviewed.</p>
+                        <img src="images/settings/leave/approval.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appAttendanceSetting">
+                <h4>
+                    Attendance settings
+                </h4>
+                <p>
+                    In order to mange the attendance request and put every employee's attendance
+                    in a group of behaviour we introduce some attendance setting.
+                </p>
+                <ul>
+                    <li class="scrollspy-section mb-5" id="appAttendancePreferencesSetting">
+                        <h5>Preferences</h5>
+                        <p>Here you can setup how you want to review an employee's attendance request.</p>
+                        <img src="images/settings/attendance/preferences.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li class="scrollspy-section mb-5" id="appAttendanceDefinitionSetting">
+                        <h5>Definition</h5>
+                        <p>In this setting you can specify the punch in tolerance time and attendance behaviour.</p>
+                        <img src="images/settings/attendance/definition.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li class="scrollspy-section mb-5" id="appAttendanceGeolocationSetting">
+                        <h5>Geolocation & IP</h5>
+                        <p>In this setting you can set Ip Geolocation api key to get the employee's ip and geolocation data when Punching In in the application.</p>
+                        <img src="images/settings/attendance/geolocation_setting.png" class="img-thumbnail mb-3" alt="">
+                        <p>After setting the api key punch in modal looks like this,</p>
+                        <img src="images/attendance/punch_in_with_geo.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appPayrollSetting">
+                <h4>
+                    Payroll settings
+                </h4>
+                <p>
+                    To simplify and speed up your payroll work we introduce some payroll settings that will
+                    help to boost your payroll related work.
+                </p>
+                <ul>
+                    <li class="scrollspy-section mb-5" id="appPayrollDefaultSetting">
+                        <h5>Default Payrun</h5>
+                        <p>
+                            Here you can setup the payrun period and generate types which will be used
+                            to apply to all employees as default while generating payslip.
+                        </p>
+                        <p>
+                            <span class="font-weight-bold">S: N:</span> If any employee has its won payrun setting from
+                        his/her profile that will be preferred first.
+                        </p>
+                        <img src="images/settings/payroll/default_payrun.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li class="scrollspy-section mb-5" id="appPayrollBadgeSetting">
+                        <h5>Badge Value</h5>
+                        <p>
+                            Here you can setup some default beneficiaries for employees which will be attached
+                            to payslips while generating.
+                        </p>
+                        <p>
+                            <span class="font-weight-bold">S: N:</span> If any employee has its won beneficiary setting from
+                        his/her profile that will be preferred first.
+                        </p>
+                        <img src="images/settings/payroll/badge_value.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li class="scrollspy-section mb-5" id="appPayrollAudienceSetting">
+                        <h5>Manage Audience</h5>
+                        <p>
+                            In this setting you can restrict any employee from getting the default payrun or beneficiary
+                            settings.
+                        </p>
+                        <img src="images/settings/payroll/manage_audience.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appImport">
+                <h4>
+                    Import Data
+                </h4>
+                <p>
+                    For getting quickstart with your existing data we introduce a import functionality.
+                </p>
+                <ul>
+                    <li class="scrollspy-section mb-5" id="appEmployeesImport">
+                        <h5>Employees Import</h5>
+                        <p>
+                            Here you can import your existing employees with a spreadsheet following the
+                            given instruction:
+                        </p>
+                        <ol>
+                            <li>
+                                Download the sample .CSV file from the employee import page.
+                            </li>
+                            <img src="images/settings/import/employees_import.png" class="img-thumbnail mb-3" alt="">
+                            <li>
+                                Format your CSV the same way as the sample file.
+                            </li>
+                            <li>
+                                Your CSV columns should be separated by commas, not semicolons or any other characters.
+                            </li>
+                            <li>
+                                The names and the number of the column in your CSV should be the same as the sample.
+                            </li>
+                            <img src="images/settings/import/employees_csv_sample.png" class="img-thumbnail mb-3" alt="">
+                            <li>
+                                Required field's (name, email, gender, employee_id, department,
+                                designation, employment_status, roles) column cell must not be empty.
+                            </li>
+                            <li>
+                                The columns : department, designation, employment_status and roles value must
+                                be the same value that exists on the application. For the gender column three
+                                option available [male, female, other], for multiple roles use only comma(,)
+                                to separate roles and the joining_date column must be the date format of YYYY-MM-DD
+                            </li>
+                            <li>
+                                When an error occurs download the error file and correct the
+                                incorrect cells and import that file again through .csv format.
+                            </li>
+                            <li>
+                                All imported employees will receive an email to reset
+                                their password in order to log in except the terminated employee.
+                            </li>
+                            <li>
+                                <b>Recommended CSV file should not contain more than 500 rows with default server configuration.
+                                    <span class="font-italic">For any reason if the maximum execution time exceed then we highly recommend
+                                    you to increase your server execution time.</span></b>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="scrollspy-section mb-5" id="appAttendancesImport">
+                        <h5>Attendance Import</h5>
+                        <p>
+                            Here you can import any employee's daily or monthly attendances with a spreadsheet following the
+                            given instruction:
+                        </p>
+                        <ol>
+                            <li>
+                                Download the sample .CSV file from the attendance import page.
+                            </li>
+                            <img src="images/settings/import/attendances_import.png" class="img-thumbnail mb-3" alt="">
+                            <li>
+                                Format your CSV the same way as the sample file.
+                            </li>
+                            <li>
+                                Your CSV columns should be separated by commas, not semicolons or any other characters.
+                            </li>
+                            <li>
+                                The names and the number of the column in your CSV should be the same as the sample.
+                            </li>
+                            <img src="images/settings/import/attendance_csv_sample.png" class="img-thumbnail mb-3" alt="">
+                            <li>
+                                Required field's (employee_id, in_time, out_time) column cell must not be empty.
+                            </li>
+                            <li>
+                                The column : employee_id value must be the same value that exists on the application and the in_time
+                                and out_time columns must be the date format of \'Y-m-d H:m:s\' (the hour should be 24hour format)
+                            </li>
+                            <li>
+                                When an error occurs download the error file and correct the
+                                incorrect cells and import that file again through .csv format.
+                            </li>
+                            <li>
+                                You will find all imported data in attendance module.
+                            </li>
+                            <li>
+                                <b>Recommended CSV file should not contain more than 500 rows with default server configuration.
+                                    <span class="font-italic">For any reason if the maximum execution time exceed then we highly recommend
+                                    you to increase your server execution time.</span></b>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="scrollspy-section mb-5" id="appExport">
+                <h4>
+                    Export Data
+                </h4>
+                <p>
+                    For providing extra usability of data, we introduce export functionality in the application.
+                </p>
+                <ul id="appAttendanceExport">
+                    <li class="scrollspy-section mb-5" >
+                        <h5>Export Attendance Daily Log</h5>
+                        <p>
+                            You can export daily or any specific day's attendance log in a spreadsheet from the attendance daily log
+                            option.
+                        </p>
+                        <img src="images/attendance/export_daily_log.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li class="scrollspy-section mb-5">
+                        <h5>Export Attendance Summery</h5>
+                        <p>
+                            Here you can export any specific or all employees attendance summery by filtering the data.
+                        </p>
+                        <img src="images/attendance/export_summery.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+    </div>
+</div>
+
+<a class="js-page-scrolling back-to-top" href="#top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-up"
+         viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+    </svg>
+</a>
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+<script src="js/documentation.js" type="text/javascript"></script>
+</body>
+</html>

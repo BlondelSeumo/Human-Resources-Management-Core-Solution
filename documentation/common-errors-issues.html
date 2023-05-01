@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <title>PayDay - HRM Application.</title>
+
+    <link rel="shortcut icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+
+    <!-- Bootstrap4.6.0 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Documentation CSS -->
+    <link rel="stylesheet" href="css/documentation.css">
+</head>
+
+<body>
+<div class="d-none" id="top"></div>
+
+<div class="wrapper">
+
+    <div class="sidebar-wrapper">
+        <div id="menu-toggle" class="toggle-sidebar">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="logo-wrapper">
+            <img src="images/logo.png" class="img-fluid" width="200" alt="">
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <!--Introduction-->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Introduction</a>
+                </li>
+
+                <!--Installation-->
+                <li class="nav-item active">
+                    <a href="server-requirement.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Installation
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="server-requirement.html" class="sub-menu-link js-page-scrolling">Server
+                                Requirements</a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="installation.html" class="sub-menu-link js-page-scrolling">How to Install</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="installation.html" class="sub-menu-link js-page-scrolling">Root</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="install_sub_folder.html" class="sub-menu-link js-page-scrolling">
+                                        Sub Folder
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item active">
+                            <a href="common-errors-issues.html" class="sub-menu-link js-page-scrolling">
+                                Common Errors & Issues
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Important settings-->
+                <li class="nav-item">
+                    <a href="important-settings.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Important settings
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item">
+                            <a href="#delivery-settings" class="sub-menu-link js-page-scrolling">
+                                Delivery settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#smtp" class="sub-menu-link js-page-scrolling">
+                                        SMTP
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#mailgun" class="sub-menu-link js-page-scrolling">
+                                        Mailgun
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#amazon-ses" class="sub-menu-link js-page-scrolling">
+                                        Amazon SES
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#scheduler-queue" class="sub-menu-link js-page-scrolling">
+                                Scheduler & queue
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Instruction Guide-->
+                <li class="nav-item">
+                    <a href="instruction-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Instruction Guide
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item active">
+                            <a href="#appDashboard" class="sub-menu-link js-page-scrolling">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appJobDesk" class="sub-menu-link js-page-scrolling">
+                                Job Desk
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appEmployee" class="sub-menu-link js-page-scrolling">
+                                Employee
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appLeave" class="sub-menu-link js-page-scrolling">
+                                Leave
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAttendance" class="sub-menu-link js-page-scrolling">
+                                Attendance
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appPayroll" class="sub-menu-link js-page-scrolling">
+                                Payroll
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAdministration" class="sub-menu-link js-page-scrolling">
+                                Administration
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#userAndRolesSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Users & Roles
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appWorkshift" class="sub-menu-link js-page-scrolling">
+                                        Work Shift
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appDepartment" class="sub-menu-link js-page-scrolling">
+                                        Department
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appHoliday" class="sub-menu-link js-page-scrolling">
+                                        Holiday
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appSettings" class="sub-menu-link js-page-scrolling">
+                                Settings
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#settingsAppSettings" class="sub-menu-link js-page-scrolling">
+                                App Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#generalSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        General
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#deliverySettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Email Setup
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#notificationSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Notification
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appLeaveSetting" class="sub-menu-link js-page-scrolling">
+                                Leave Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveTypeSetting" class="sub-menu-link js-page-scrolling">
+                                        Leave type
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveAllowanceSetting" class="sub-menu-link js-page-scrolling">
+                                        Allowance Policy
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveApproveSetting" class="sub-menu-link js-page-scrolling">
+                                        Approval
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAttendanceSetting" class="sub-menu-link js-page-scrolling">
+                                Attendance Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendancePreferencesSetting" class="sub-menu-link js-page-scrolling">
+                                        Preferences
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendanceDefinitionSetting" class="sub-menu-link js-page-scrolling">
+                                        Definition
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appPayrollSetting" class="sub-menu-link js-page-scrolling">
+                                Payroll Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollDefaultSetting" class="sub-menu-link js-page-scrolling">
+                                        Default Payrun
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollBadgeSetting" class="sub-menu-link js-page-scrolling">
+                                        Badge Value
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollAudienceSetting" class="sub-menu-link js-page-scrolling">
+                                        Manage Audience
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Development Guide-->
+                <li class="nav-item">
+                    <a href="development-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Development Guide
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item">
+                            <a href="#languageSettings" class="sub-menu-link js-page-scrolling">
+                                Language Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#setLanguage" class="sub-menu-link js-page-scrolling">
+                                        Set Language
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#updateLanguage" class="sub-menu-link js-page-scrolling">
+                                        Update Language
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#environmentConfiguration" class="sub-menu-link js-page-scrolling">
+                                Environment configuration
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#addNewPage" class="sub-menu-link js-page-scrolling">
+                                Add new page
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#changeColorAndDesign" class="sub-menu-link js-page-scrolling">
+                                Change color & design
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Upgrade Guide-->
+                <li class="nav-item">
+                    <a href="upgrade.html" class="nav-link">Upgrade Guide</a>
+                </li>
+
+                <!--Change Log-->
+                <li class="nav-item">
+                    <a href="change-log.html" class="nav-link">
+                        Change Log
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-content-wrapper">
+        <section class="scrollspy-section mb-primary" id="common_errors_and_issues">
+            <h3 class="bd-title mb-3 "> Common Errors & Issues </h3>
+            <p class="bd-subtitle"> We are continuously updating this page and we are explaining the various types of
+                errors and possible solutions regarding the issues. </p>
+        </section>
+        <section class="scrollspy-section" id="email_set">
+            <h5 class="bd-title mb-3 "> NOT RECEIVING EMAILS </h5>
+            <ul class="mt-3" style="list-style: none">
+                <li>
+                    Configure your email delivery service from <span style="color:#007bff">Settings > App Settings > Email Setup</span>
+                    Make sure that your email delivery service credentials are correct.
+                <li>
+                <li>
+                    If you have completed setting up your email server and you are still not getting any emails, these
+                    are the possible reasons and solutions.
+                    <ol>
+                        <li>
+                            Email is marked as spam: Configure DKIM & SPF records are used by email providers to verify
+                            and increase the trust of email coming from your server. This is usually common for shared
+                            hosting. You can check if your server has been blacklisted here. If your server is
+                            blacklisted, you will need to contact your web hosting provider for help.
+                        </li>
+                        <li>
+                            Make sure that your web hosting server (email server) has been blacklisted. If your server
+                            is blacklisted, you will need to contact your web hosting provider for help.
+                        </li>
+                    </ol>
+                <li>
+
+            </ul>
+        </section>
+        <section class="scrollspy-section mt-4" id="server_error">
+            <h5 class="bd-title mb-3 "> Server Error </h5>
+            <ul class="mt-3" style="list-style: none">
+                <li>
+                    You need to download <span style="color:#007bff">error logs</span> to identify the error. Contact
+                    <span style="color:#007bff">support@gainhq.com</span>
+                    to further assistance.
+                <li>
+                <li>
+                    <p>You will need to log in to your Cpanel/web hosting control panels > File Manager (you can
+                        also use an FTP client if you prefer).</p>
+
+                    <p>For <span style="color:#007bff">root</span> directory go to
+                        <span style="color:#007bff">your_domain/public_html/error_log</span>.</p>
+                    <p>For <span style="color:#007bff">sub_folder</span> directory go to
+                        <span style="color:#007bff">your_domain/public_html/sub_folder/error_log</span>.</p>
+                <p>** Make sure <span style="color:#007bff">log_errors</span> option is enabled for your server.</p>
+                    <p>** Please note this path might differ depending on your web hosting setup.</p>
+
+                </li>
+            </ul>
+        </section>
+        <section class="scrollspy-section  mt-4" id="404_not_found">
+            <h5 class="bd-title mb-3 "> 404 Not Found </h5>
+            <ul class="mt-3" style="list-style: none">
+                <li>
+                    If you are getting a Not Found (The requested URL was not found on this server)
+                    in the Installation phase, you need to configure your server properly.
+                <li>
+            </ul>
+        </section>
+        <section class="scrollspy-section  mt-4" id="image_not_found">
+            <h5 class="bd-title mb-3 "> Image not upload/broken </h5>
+            <ul class="mt-3" style="list-style: none">
+                <li>
+                    Symlink permission must be enabled on your hosted server/VPS. If symlink()
+                    is disabled then you will not be able to change any images on the application (Profile picture, icon etc..).
+                    <a href="https://payday.gainhq.com/documentation/server-requirement.html#symlink_permission" target="_blank">See Documentation</a>
+                <li>
+            </ul>
+        </section>
+        <section class="scrollspy-section  mt-4" id="blank_white_page">
+            <h5 class="bd-title mb-3 "> Blank white page </h5>
+            <ul class="mt-3" style="list-style: none">
+                <li>If you are getting a blank white page, be it during setup or when using the application, it means
+                    that the application has encountered an error, however, your web hosting server is not set to
+                    display the error(s) on the screen. You can instead take a look at the error logs, to identify the
+                    error.
+                <li>
+            </ul>
+        </section>
+        <section class="scrollspy-section  mt-4" id="500_server_error">
+            <h5 class="bd-title mb-3 "> 500 Server Error </h5>
+            <ul class="mt-3" style="list-style: none">
+                <li>If you are getting a 500 server error, it means that the application has encountered an error and
+                    you will need to download the error logs to identify the error.
+                <li>
+            </ul>
+        </section>
+        <section class="scrollspy-section  mt-4" id="maybe_be_frame">
+            <h5 class="bd-title mb-3 "> Maybe you are in Frame Toastr </h5>
+            <ul class="mt-3" style="list-style: none">
+                <li>
+                    Use https instead of http for URL. Ex: https://somedomain.com.
+                <li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+<a class="js-page-scrolling back-to-top" href="#top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-up"
+         viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+    </svg>
+</a>
+
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+<script src="js/documentation.js" type="text/javascript"></script>
+</body>
+</html>

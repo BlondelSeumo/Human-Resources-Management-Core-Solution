@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Services\Tenant\TenantService;
+
+class {{ class }} extends TenantService
+{
+    public function __construct()
+    {
+
+    }
+
+
+}

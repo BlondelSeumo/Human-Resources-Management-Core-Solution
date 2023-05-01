@@ -1,0 +1,315 @@
+@import "variables";
+@import "theme-colors";
+
+.navbar {
+  &.fixed-top {
+    + .page-body-wrapper {
+      padding-top: $navbar-height;
+    }
+  }
+}
+
+// Sidebar Icon Only
+.sidebar-icon-only {
+  @media (min-width: 992px) {
+    .container-scroller {
+      position: relative;
+    }
+    .navbar {
+      margin-left: $sidebar-width-icon;
+
+      .navbar-menu-wrapper {
+        width: calc(100% - #{$sidebar-width-icon});
+      }
+    }
+    .sidebar {
+      min-height: 100%;
+      position: absolute;
+      width: $sidebar-width-icon;
+
+      .navbar-brand-wrapper {
+        z-index: 12;
+        position: fixed;
+        width: $sidebar-width-icon;
+
+        .brand-logo {
+          display: none;
+        }
+
+        .brand-logo-mini {
+          display: inline-block;
+        }
+      }
+
+      .nav {
+        overflow: visible;
+        margin-top: $navbar-height;
+
+        .nav-item {
+          position: relative;
+          padding: 0 1rem;
+
+          .nav-link {
+            display: block;
+            text-align: center;
+
+            .menu-title, .badge {
+              display: none;
+            }
+
+            .menu-title {
+              @include border-radius(0 5px 5px 0px);
+              @at-root #{selector-append(".rtl", &)} {
+                @include border-radius(5px 0 0 5px);
+              }
+            }
+
+            i {
+              &.menu-icon {
+                margin-right: 0;
+                margin-left: 0;
+              }
+
+              &.menu-arrow {
+                display: none;
+              }
+            }
+
+            &[aria-expanded] {
+              .menu-title {
+                @include border-radius(0 5px 0 0px);
+                @at-root #{selector-append(".rtl", &)} {
+                  @include border-radius(5px 0 0 0);
+                }
+              }
+            }
+          }
+
+          .collapse {
+            display: none;
+          }
+
+          &.hover-open {
+            .nav-link {
+              display: flex;
+
+              .menu-title {
+                display: flex;
+                align-items: center;
+                background: var(--sidebar-bg);
+                padding: $sidebar-submenu-item-padding;
+                left: $sidebar-width-icon;
+                position: absolute;
+                text-align: left;
+                top: 0;
+                bottom: 0;
+                width: $icon-only-collapse-width;
+                z-index: 1;
+                line-height: 1.8;
+                margin-left: 0;
+                @at-root #{selector-append(".rtl", &)} {
+                  left: auto;
+                  right: $sidebar-width-icon;
+                  text-align: left;
+                }
+                &:after {
+                  display: none;
+                }
+
+                // Shadow for dark mode
+                box-shadow: var(--menu-title-shadow);
+              }
+            }
+
+            .collapse,
+            .collapsing {
+              display: block;
+              background: var(--sidebar-bg);
+              margin: 0;
+              @include border-radius(0 0 5px 0);
+              position: absolute;
+              left: $sidebar-width-icon;
+              width: $icon-only-collapse-width;
+              @at-root #{selector-append(".rtl", &)} {
+                left: auto;
+                right: $sidebar-width-icon;
+                @include border-radius(0 0 0 5px);
+              }
+
+              .sub-menu {
+                .nav-link {
+                  line-height: 1.15;
+                  white-space: initial;
+                }
+              }
+
+              // Shadow for dark mode
+              box-shadow: var(--submenu-shadow);
+            }
+          }
+        }
+
+        &.sub-menu {
+          margin: 0 0 20px 0;
+          background-color: var(--sidebar-bg);
+
+          .nav-item {
+            .nav-link {
+              padding-left: 0;
+              padding-right: 0;
+              text-align: left;
+
+              .icon-wrapper {
+                background-color: $navbar-brand-bg;
+              }
+            }
+          }
+
+          @at-root #{selector-append(".rtl", &)} {
+            .nav-item {
+              margin-right: auto;
+              margin-left: 0;
+
+              .nav-link {
+                text-align: right;
+
+                &:before {
+                  left: 0;
+                  right: unset;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-panel {
+      min-height: 1200px;
+      margin-left: $sidebar-width-icon;
+      width: calc(100% - #{$sidebar-width-icon});
+    }
+  }
+}
+
+// Sidebar Hover Only
+.sidebar-hover-only {
+  @media (min-width: 992px) {
+    .navbar {
+      margin-left: $sidebar-width-icon;
+      z-index: 10;
+
+      .navbar-menu-wrapper {
+        width: calc(100% - #{$sidebar-width-icon});
+      }
+    }
+
+    .sidebar {
+      width: $sidebar-width-icon;
+
+      .navbar-brand-wrapper {
+        width: $sidebar-width-icon;
+
+        .brand-logo {
+          display: none;
+        }
+
+        .brand-logo-mini {
+          display: inline-block;
+        }
+      }
+
+      &:hover {
+        width: $sidebar-width-lg;
+        box-shadow: 1px 0px 5px 2px rgba(0, 0, 0, 0.5);
+
+        .navbar-brand-wrapper {
+          width: $sidebar-width-lg;
+        }
+
+        .nav {
+          .nav-item {
+            .nav-link {
+              .menu-title {
+                display: block;
+              }
+
+              i {
+                &.menu-arrow {
+                  display: inline-block;
+                }
+              }
+
+            }
+
+            &.active {
+              .nav-link {
+                &[aria-expanded="false"] {
+                  .menu-arrow {
+                    transform: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .navbar-brand-wrapper {
+
+        .brand-logo {
+          display: none;
+        }
+
+        .brand-logo-mini {
+          display: inline-block;
+        }
+      }
+
+      .nav {
+        .nav-item {
+          padding: 0 1rem;
+
+          .nav-link {
+            .menu-title {
+              display: none;
+            }
+
+            i {
+              &.menu-icon {
+                margin-right: 0;
+                margin-left: 0;
+              }
+
+              &.menu-arrow {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &.sub-menu {
+          .nav-item {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .main-panel {
+      margin-left: $sidebar-width-icon;
+      width: calc(100% - #{$sidebar-width-icon});
+    }
+  }
+}
+
+// RTL layout
+.rtl {
+  direction: rtl;
+  text-align: right;
+
+  .sidebar {
+    .nav {
+      padding-right: 0;
+    }
+  }
+}

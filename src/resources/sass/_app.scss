@@ -1,0 +1,487 @@
+@import "core/variables";
+@import "core/theme-colors";
+
+.list-bullet::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 14px;
+  border-radius: 50%;
+  background-color: #707887;
+}
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.notification-dropdown {
+  width: 350px;
+  max-width: 350px;
+}
+
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.notification-dropdown h6 {
+  padding-bottom: .5rem !important;
+}
+.vc-popover-content-wrapper{
+  z-index: 9999 !important;
+}
+.custom-date-range-calendar {
+  margin-top: -3px;
+
+  .date-picker-input {
+    .input-group {
+      position: relative;
+      border: 0 !important;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $default-radius;
+      transition: $default-transition-duration;
+
+      .form-control {
+        z-index: 2;
+        width: 38px;
+        height: 38px !important;
+        cursor: pointer;
+        padding: 0 !important;
+        font-size: 0 !important;
+        background-color: transparent !important;
+      }
+
+      .input-group-append {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        .input-group-text {
+          width: 38px;
+          height: 38px;
+          padding: 0 !important;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0 !important;
+          background-color: transparent;
+        }
+      }
+
+      &:hover {
+        background-color: var(--base-color);
+      }
+    }
+  }
+}
+
+.progress {
+  &.animate-progress {
+    .progress-bar {
+      animation-name: animateProgressBar;
+      animation-duration: .5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+    }
+  }
+}
+
+.dropdown-employee-termination {
+  .btn {
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .dropdown-menu {
+    width: 350px;
+
+    .note {
+      overflow-y: auto;
+      max-height: 200px;
+    }
+  }
+}
+
+.employee-preview-card {
+  .dropdown {
+    &.options-dropdown {
+      right: $default-card-padding;
+
+      .btn-option {
+        width: 35px;
+        height: 15px;
+        border-radius: 0.5rem;
+        background-color: var(--icon-hover-bg);
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}
+
+.timeline {
+  .timeline-title {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .timeline-icon {
+    position: relative;
+
+    .svg-wrapper {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      color: $brand-color;
+      background-color: var(--base-color);
+
+      svg {
+        width: 17px;
+        height: 17px;
+        stroke-width: 2;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: calc(50% - 1px);
+      right: auto;
+      height: 100%;
+      border: 1px solid var(--base-color);
+      background-color: var(--base-color);
+    }
+  }
+
+  .timeline-content {
+    .single-record {
+      z-index: 1;
+      padding: 1rem;
+      width: fit-content;
+      position: relative;
+      border-radius: $default-radius;
+      background-color: var(--base-color);
+
+      &:before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        height: 100%;
+        border: 1px solid var(--base-color);
+        top: 40px;
+        left: 2rem;
+        right: auto;
+      }
+
+      &:last-child {
+        &:before {
+          height: 0;
+        }
+      }
+    }
+  }
+
+  &.timeline-change-log {
+    .timeline-title {
+      width: 170px;
+      min-width: 170px;
+    }
+  }
+
+  &.timeline-response-log {
+    .timeline-title {
+      width: 200px;
+      min-width: 200px;
+    }
+
+    .timeline-content {
+      .single-record {
+        &:before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          border: 1px solid var(--base-color);
+          top: 40px;
+          left: 2rem;
+          right: auto;
+        }
+
+        &:last-child {
+          &:before {
+            height: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: var(--base-color);
+
+  svg {
+    width: 22px;
+    height: 22px;
+    color: $brand-color;
+  }
+
+  i {
+    font-size: 22px;
+    color: $brand-color;
+  }
+}
+
+.summery-calendar {
+  .profile-column {
+    border-left: 1px solid var(--base-color);
+
+    .column-header {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--base-color);
+    }
+
+    .profile-box {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid var(--base-color);
+      border-bottom: 1px solid var(--base-color);
+    }
+  }
+
+  .total-hour-column {
+    .column-header {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid var(--base-color);
+      border-bottom: 1px solid var(--base-color);
+    }
+
+    .column-content {
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      border-right: 1px solid var(--base-color);
+      border-bottom: 1px solid var(--base-color);
+
+      .hour-title, .hour-value {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .hour-value {
+          height: 100%;
+          padding: 0 2rem;
+          color: $muted-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .hour-title {
+        border-right: 1px solid var(--base-color);
+      }
+    }
+  }
+
+  .date-column {
+    flex-grow: 1;
+    max-width: 100%;
+    overflow-x: auto;
+
+    .date {
+      height: 50px;
+      padding: 0 1.2rem;
+      display: flex;
+      color: darken($default-secondary-color, 10%);
+      align-items: center;
+      justify-content: center;
+      background-color: var(--base-color);
+      white-space: nowrap;
+    }
+
+    .date-hour-wrapper {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid var(--base-color);
+      border-bottom: 5px solid var(--base-color);;
+
+      .date-hour {
+        height: 100%;
+        color: $muted-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--base-color);;
+      }
+    }
+  }
+
+  &.leave-calendar {
+    .profile-column {
+      .profile-box {
+        width: 240px;
+        height: 100px;
+        flex-direction: row;
+      }
+    }
+
+    .age-column {
+      .column-header {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid var(--base-color);
+        border-bottom: 1px solid var(--base-color);
+      }
+
+      .column-content {
+        width: 140px;
+        height: 100px;
+        border-right: 1px solid var(--base-color);
+        border-bottom: 1px solid var(--base-color);
+      }
+    }
+
+    .date-column {
+      .date {
+        height: 50px;
+        padding: 0 1.2rem;
+        display: flex;
+        color: darken($default-secondary-color, 10%);
+        align-items: center;
+        justify-content: center;
+        background-color: var(--base-color);
+        white-space: nowrap;
+      }
+
+      .date-hour-wrapper {
+        height: 100px;
+        border-right: 1px solid var(--base-color);
+        border-bottom: 1px solid var(--base-color);
+
+        .popover-leave-age {
+          height: 100%;
+
+          .leave-age {
+            border: 0;
+            width: 100%;
+            display: block;
+            background-color: var(--avatar-no-image-bg);
+
+            &:focus {
+              outline: 0;
+            }
+
+            &.age-length-full {
+              height: 100%;
+            }
+
+            &.age-length-half {
+              height: 50%;
+            }
+
+            &.age-length-quarter {
+              height: 30%;
+            }
+
+            &.bg-pending {
+              background-color: rgba(255, 204, 153, 0.5)
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.month-year-picker {
+  .dropdown {
+    .dropdown-menu {
+      min-width: 18rem;
+
+      .single-month {
+        display: block;
+        cursor: pointer;
+        padding: 10px 12px;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: $default-radius;
+        transition: all $default-transition-duration $action-transition-timing-function;
+
+        &.active {
+          background-color: var(--base-color);
+        }
+
+        &:hover {
+          background-color: var(--base-color);
+        }
+      }
+
+      .years-dropdown {
+        .dropdown-menu-years {
+          min-width: 7rem;
+          top: 15px !important;
+          box-shadow: none !important;
+          border: 1px solid var(--default-border-color);
+
+          .caret {
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            z-index: -1;
+            content: '';
+            display: block;
+            border-top: inherit;
+            border-left: inherit;
+            background-color: inherit;
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          }
+
+          .years-wrapper {
+            overflow-y: auto;
+            max-height: 160px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// For disabled specific section
+.disabled-section {
+  opacity: .8;
+  pointer-events: none;
+}
+
+@keyframes animateProgressBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

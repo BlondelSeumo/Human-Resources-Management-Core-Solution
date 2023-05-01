@@ -1,0 +1,49 @@
+// Import Bootstrap
+@import "core/bootstrap/scss/bootstrap";
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.custom-row::before, .custom-row::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.employee-info {
+  margin-bottom: 30px;
+}
+
+.employee-info .column {
+  width: 33.33%;
+  float: left;
+}
+
+.basic-salary-info .column,
+.benificiary-info .column,
+.salary-details-info .column,
+.total-benificiary-info .column,
+.net-salary-info .column,
+.earning-deduction-info .column {
+  width: 50%;
+  float: left;
+}
+
+.earnings-info table,
+.deductions-info table,
+.earning-deduction-info table {
+  width: 91%;
+  border-collapse: collapse;
+}
+
+.currency-symbol{
+  font-family: DejaVu Sans, sans-serif !important;
+}

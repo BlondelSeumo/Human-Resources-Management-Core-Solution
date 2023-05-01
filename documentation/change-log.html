@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <title>PayDay - HRM Application.</title>
+
+    <link rel="shortcut icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+
+    <!-- Bootstrap4.6.0 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Documentation CSS -->
+    <link rel="stylesheet" href="css/documentation.css">
+</head>
+
+<body>
+<div class="d-none" id="top"></div>
+
+<div class="wrapper">
+    <div class="sidebar-wrapper">
+        <div id="menu-toggle" class="toggle-sidebar">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="logo-wrapper">
+            <img src="images/logo.png" class="img-fluid" width="200" alt="">
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <!--Introduction-->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Introduction</a>
+                </li>
+
+                <!--Installation-->
+                <li class="nav-item">
+                    <a href="server-requirement.html"
+                       class="nav-link d-flex align-items-center justify-content-between">
+                        Installation
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item">
+                            <a href="server-requirement.html" class="sub-menu-link js-page-scrolling">Server
+                                Requirements</a>
+                        </li>
+                        <li class="sub-menu-item active">
+                            <a href="installation.html" class="sub-menu-link js-page-scrolling">How to Install</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item active">
+                                    <a href="installation.html" class="sub-menu-link js-page-scrolling">Root</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="install_sub_folder.html" class="sub-menu-link js-page-scrolling">
+                                        Sub Folder
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="common-errors-issues.html" class="sub-menu-link js-page-scrolling">
+                                Common Errors & Issues
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Important settings-->
+                <li class="nav-item">
+                    <a href="important-settings.html"
+                       class="nav-link d-flex align-items-center justify-content-between">
+                        Important settings
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item">
+                            <a href="#delivery-settings" class="sub-menu-link js-page-scrolling">
+                                Delivery settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#smtp" class="sub-menu-link js-page-scrolling">
+                                        SMTP
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#mailgun" class="sub-menu-link js-page-scrolling">
+                                        Mailgun
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#amazon-ses" class="sub-menu-link js-page-scrolling">
+                                        Amazon SES
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#scheduler-queue" class="sub-menu-link js-page-scrolling">
+                                Scheduler & queue
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Instruction Guide-->
+                <li class="nav-item">
+                    <a href="instruction-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Instruction Guide
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item active">
+                            <a href="#appDashboard" class="sub-menu-link js-page-scrolling">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appJobDesk" class="sub-menu-link js-page-scrolling">
+                                Job Desk
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appEmployee" class="sub-menu-link js-page-scrolling">
+                                Employee
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appLeave" class="sub-menu-link js-page-scrolling">
+                                Leave
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAttendance" class="sub-menu-link js-page-scrolling">
+                                Attendance
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appPayroll" class="sub-menu-link js-page-scrolling">
+                                Payroll
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAdministration" class="sub-menu-link js-page-scrolling">
+                                Administration
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#userAndRolesSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Users & Roles
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appWorkshift" class="sub-menu-link js-page-scrolling">
+                                        Work Shift
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appDepartment" class="sub-menu-link js-page-scrolling">
+                                        Department
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appHoliday" class="sub-menu-link js-page-scrolling">
+                                        Holiday
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appSettings" class="sub-menu-link js-page-scrolling">
+                                Settings
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#settingsAppSettings" class="sub-menu-link js-page-scrolling">
+                                App Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#generalSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        General
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#deliverySettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Email Setup
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#notificationSettingsAppLevel" class="sub-menu-link js-page-scrolling">
+                                        Notification
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appLeaveSetting" class="sub-menu-link js-page-scrolling">
+                                Leave Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveTypeSetting" class="sub-menu-link js-page-scrolling">
+                                        Leave type
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveAllowanceSetting" class="sub-menu-link js-page-scrolling">
+                                        Allowance Policy
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appLeaveApproveSetting" class="sub-menu-link js-page-scrolling">
+                                        Approval
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#appAttendanceSetting" class="sub-menu-link js-page-scrolling">
+                                Attendance Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendancePreferencesSetting" class="sub-menu-link js-page-scrolling">
+                                        Preferences
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appAttendanceDefinitionSetting" class="sub-menu-link js-page-scrolling">
+                                        Definition
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu-item">
+                            <a href="#appPayrollSetting" class="sub-menu-link js-page-scrolling">
+                                Payroll Settings
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollDefaultSetting" class="sub-menu-link js-page-scrolling">
+                                        Default Payrun
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollBadgeSetting" class="sub-menu-link js-page-scrolling">
+                                        Badge Value
+                                    </a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#appPayrollAudienceSetting" class="sub-menu-link js-page-scrolling">
+                                        Manage Audience
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Development Guide-->
+                <li class="nav-item">
+                    <a href="development-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Development Guide
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu d-none">
+                        <li class="sub-menu-item">
+                            <a href="#languageSettings" class="sub-menu-link js-page-scrolling">Language Settings</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#setLanguage" class="sub-menu-link js-page-scrolling">Set Language</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#updateLanguage" class="sub-menu-link js-page-scrolling">Update
+                                        Language</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#environmentConfiguration" class="sub-menu-link js-page-scrolling">Environment
+                                configuration</a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#addNewPage" class="sub-menu-link js-page-scrolling">Add new page</a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#changeColorAndDesign" class="sub-menu-link js-page-scrolling">Change color &
+                                design</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Upgrade Guide-->
+                <li class="nav-item">
+                    <a href="upgrade.html" class="nav-link">Upgrade Guide</a>
+                </li>
+
+                <!--Change Log-->
+                <li class="nav-item active">
+                    <a href="change-log.html" class="nav-link">Change Log</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-content-wrapper">
+        <section>
+            <h3 class="mb-4">
+                Change Log
+            </h3>
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.9 – 21 March 2023</h5>
+                <div>
+                    <code class="text-muted d-block">[Added] Google Map integration</code>
+                    <code class="text-muted d-block">[Added] Module enable/disable</code>
+                    <code class="text-muted d-block">[Added] Leave summary export</code>
+                    <code class="text-muted d-block">[Added] Export payslips</code>
+                    <code class="text-muted d-block">[Added] Export asset</code>
+                    <code class="text-muted d-block">[Added] Added filter in attendance details</code>
+                    <code class="text-muted d-block">[Updated] Improved all module pagination</code>
+                    <code class="text-muted d-block">[Updated] Improve documentation</code>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.8 – 15 January 2023</h5>
+                <div>
+                    <code class="text-muted d-block">[Added] Implement Punch in/out alert</code>
+                    <code class="text-muted d-block">[Added] Implement asset management</code>
+                    <code class="text-muted d-block">[Added] Add new user manually</code>
+                    <code class="text-muted d-block">[Added] Laravel 9 version upgrade</code>
+                    <code class="text-muted d-block">[Updated] Modify employee role permission</code>
+                    <code class="text-muted d-block">[Updated] Improve documentation</code>
+                    <code class="text-muted d-block">[Fixed] Fixed PDF payslip currency issue</code>
+                </div>
+            </div>
+
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.7.1 – 12 January 2023</h5>
+                <div>
+                    <code class="text-muted d-block">[Updated] Maintenance update</code>
+                </div>
+                <div class="alert alert-warning text-dark mt-2">
+                    <b>Alert:</b> v1.7.1 is a prerequisite of v1.8. For that you have to enable manual update and set
+                    PHP version ">= 8.0" on the hosted server.
+                    <ul>
+                        <li>
+                            To enable manual update, go to the following file path on your hosted server: <code>src/config/Installer.php</code>
+                        </li>
+                        <li>
+                            Open the <code>Installer.php</code> file and change the 49 no line <code>'manual_update' =>
+                            false</code> to <code>'manual_update' => true</code>
+                        </li>
+                    </ul>
+                    <p>Please follow the <a href="https://youtu.be/kyby9hU4bA8" target="_blank">video</a> for more
+                        clearance.</p>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.7 – 22 September 2022</h5>
+                <div>
+                    <code class="text-muted d-block">[Added] PHP 8.x version support</code>
+                </div>
+                <div class="alert alert-warning text-dark mt-2">
+                    The application will support PHP <code>8.x</code> version after this update.
+                    We request you to upgrade your server's
+                    PHP version to 8.x immediately. Our future update will not be compatible with PHP 7.4 version any
+                    more.
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.6 – 1 September 2022</h5>
+                <div>
+                    <code class="text-muted d-block">[Added] Employee document upload</code>
+                    <code class="text-muted d-block">[Added] Department employees view</code>
+                    <code class="text-muted d-block">[Updated] Attendance Summery data view</code>
+                    <code class="text-muted d-block">[Updated] Attendance Summery data export for single employee</code>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.5 – 11 August 2022</h5>
+                <div>
+                    <code class="text-muted d-block">[Added] Show daily logs on Dashboard</code>
+                    <code class="text-muted d-block">[Added] Mapbox location service in attendance</code>
+                    <code class="text-muted d-block">[Added] Implement bulk attendance approval</code>
+                    <code class="text-muted d-block">[Added] Implement bulk leave approval</code>
+                    <code class="text-muted d-block">[Updated] Improved payslip presentation</code>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.4 – 13 June 2022</h5>
+                <div>
+                    <code class="text-muted d-block">[Added] Geolocation & IP integration in attendance</code>
+                    <code class="text-muted d-block">[Added] Implement announcements board</code>
+                    <code class="text-muted d-block">[Added] Export all employees attendance</code>
+                    <code class="text-muted d-block">[Updated] Improve development guidelines in the
+                        documentation</code>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.3 – 1 February 2022</h5>
+                <div>
+                    <code class="text-muted d-block">[Added] Implement Import attendance</code>
+                    <code class="text-muted d-block">[Added] Enhancement export attendance for dept. manager</code>
+                    <code class="text-muted d-block">[Updated] Improved employee role access</code>
+                    <code class="text-muted d-block">[Updated] Optimize code and improve data response</code>
+                    <code class="text-muted d-block">[Updated] Improve documentation</code>
+                    <code class="text-muted d-block">[Fixed] Fixed some bugs</code>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.2 – 1 December 2021</h5>
+                <div>
+                    <code class="text-muted d-block">[Added] Implement export attendance</code>
+                    <code class="text-muted d-block">[Added] Implement new installer and update</code>
+                    <code class="text-muted d-block">[Added] Added cronjob command in settings</code>
+                    <code class="text-muted d-block">[Updated] Improved compatibility with global time zone</code>
+                    <code class="text-muted d-block">[Updated] Improved translate Language documentation</code>
+                    <code class="text-muted d-block">[Updated] Optimize code and improve data response</code>
+                    <code class="text-muted d-block">[Updated] Improve documentation</code>
+                    <code class="text-muted d-block">[Fixed] Fixed some bugs</code>
+                </div>
+                <p>Note: You need to update v1.1.2 first to get next update of v1.2.</p>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.1.2 – 1 December 2021</h5>
+                <div>
+                    <code class="text-muted d-block">[Fixed] Fixed update issue</code>
+                </div>
+                <div class="alert alert-warning text-dark">
+                    Note: If your update page is loading recursively, Please enter the keyboard
+                    <code>esc</code> button to make the page freeze. And then go for update.
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="mb-2">Version 1.1 – 28 September 2021</h5>
+                <div>
+                    <code class="text-muted d-block">[Added] Implement customize Payrun settings</code>
+                    <code class="text-muted d-block">[Added] Added note in Payslips</code>
+                    <code class="text-muted d-block">[Added] Implement tooltips in employee</code>
+                    <code class="text-muted d-block">[Added] Add test email in Email setup</code>
+                    <code class="text-muted d-block">[Updated] Improved translate Language documentation</code>
+                    <code class="text-muted d-block">[Updated] Optimize code and improve data response</code>
+                    <code class="text-muted d-block">[Updated] Improve documentation</code>
+                    <code class="text-muted d-block">[Fixed] Fixed some bugs</code>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+<script src="js/documentation.js" type="text/javascript"></script>
+</body>
+</html>
+<script>export default {
+    components: {}
+}
+</script>

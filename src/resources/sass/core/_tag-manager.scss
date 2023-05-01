@@ -1,0 +1,98 @@
+@import "variables";
+@import "theme-colors";
+
+.tag-manager {
+  .chips-container {
+    overflow-y: auto;
+    min-height: auto;
+    max-height: 120px;
+    background-color: transparent;
+
+    .add {
+
+    }
+
+    .chips {
+      color: $white;
+      background-color: #8bd2eb;
+      padding: 0.19rem 0.45rem 0.19rem 1rem;
+
+      .chips-label {
+        font-size: 95%;
+      }
+
+      .delete-chips {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    max-width: 18rem;
+
+    .color-picker-wrapper {
+      position: absolute;
+      right: 35px;
+
+      .input-color-container {
+        width: 35px;
+        height: 35px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .input-color {
+          opacity: 0;
+          border: none;
+          position: absolute;
+          top: -5px;
+          right: -12px;
+          width: 50px;
+          height: 44px;
+        }
+
+        .input-color-label {
+          margin-bottom: 0;
+
+          i {
+            font-size: 21px;
+          }
+        }
+      }
+    }
+
+    .chip {
+      color: $white;
+      max-width: 160px;
+      border-radius: 25px;
+      padding: 0.18rem 1.2rem;
+      background-color: #8bd2eb;
+
+      .chips-label {
+        font-size: 95%;
+      }
+    }
+  }
+}
+
+.table {
+  .tag-manager {
+    width: 320px;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 767px) {
+  .table-view-responsive {
+    .table {
+      .tag-manager {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+

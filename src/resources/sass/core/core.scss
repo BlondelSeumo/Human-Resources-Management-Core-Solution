@@ -1,0 +1,73 @@
+// Import Fonts
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/poppins.ttf);
+}
+
+// import css from node modules
+@import url('../../../node_modules/nouislider/distribute/nouislider.min.css');
+@import url('../../../node_modules/animate.css/animate.min.css');
+@import url('../../../node_modules/mapbox-gl/dist/mapbox-gl.css');
+
+// Import Custom Variables
+@import "variables";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Template mixins
+@import "./mixins/misc";
+@import "./mixins/animation";
+
+@import "navs";
+@import "dropdown";
+@import "datatable";
+@import "tab";
+@import "layouts";
+@import "misc";
+@import "vertical-wrapper";
+@import "buttons";
+@import "forms";
+@import "custom-image-upload";
+@import "modals";
+@import "cards";
+@import "chart";
+@import "badges";
+@import "filters";
+@import "daterange";
+@import "avatars";
+@import "drag-drop";
+@import "timepicker";
+@import "datepicker";
+@import "progress-bar";
+@import "loaders";
+@import "toaster";
+@import "tab-layout";
+@import "tag-manager";
+@import "mobile-layout";
+@import "calendar";
+@import "accordion";
+
+// Utilities
+@import "utilities/fonts";
+@import "utilities/icons";
+@import "utilities/colors";
+@import "utilities/padding-margin";
+
+// Pages
+@import "pages/auth";
+@import "pages/user-profile";
+@import "pages/dashboard";
+@import "pages/users-roles";
+@import "pages/unsubscriber-page";
+
+// Right to Left Direction
+@import "dir-rtl";
+
+// App
+@import "../app";
+// Brand
+@import "../brand";

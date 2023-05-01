@@ -1,0 +1,277 @@
+@import "variables";
+@import "theme-colors";
+
+@mixin status-property {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--default-card-bg);
+}
+
+@mixin no-image-property {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--avatar-no-image-font);
+  background-color: var(--avatar-no-image-bg);
+}
+
+.avatars-w-100 {
+  position: relative;
+
+  .no-img, img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .no-img {
+    font-size: 36px;
+    @include no-image-property;
+  }
+
+  .status {
+    height: 16px;
+    width: 16px;
+    right: 5px;
+    bottom: 5px;
+    @include status-property;
+  }
+}
+
+.avatars-w-90 {
+  position: relative;
+
+  .no-img, img {
+    height: 90px;
+    width: 90px;
+  }
+
+  .no-img {
+    font-size: 32px;
+    @include no-image-property;
+  }
+
+  .status {
+    height: 15px;
+    width: 15px;
+    right: 3.9px;
+    bottom: 3.9px;
+    @include status-property;
+  }
+}
+
+.avatars-w-80 {
+  position: relative;
+
+  .no-img, img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .no-img {
+    font-size: 24px;
+    @include no-image-property;
+  }
+
+  .status {
+    height: 14px;
+    width: 14px;
+    right: 2.8px;
+    bottom: 2.8px;
+    @include status-property;
+  }
+}
+
+.avatars-w-70 {
+  position: relative;
+
+  .no-img, img {
+    height: 70px;
+    width: 70px;
+  }
+
+  .no-img {
+    font-size: 20px;
+    @include no-image-property;
+  }
+
+  .status {
+    height: 13px;
+    width: 13px;
+    right: 1.9px;
+    bottom: 1.9px;
+    @include status-property;
+  }
+}
+
+.avatars-w-60 {
+  position: relative;
+
+  .no-img, img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .no-img {
+    font-size: 16px;
+    @include no-image-property;
+  }
+
+  .status {
+    height: 12px;
+    width: 12px;
+    right: 1.2px;
+    bottom: 1.2px;
+    @include status-property;
+  }
+}
+
+.avatars-w-50 {
+  position: relative;
+
+  .no-img, img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .no-img {
+    font-size: 14px;
+    @include no-image-property;
+  }
+
+  .status {
+    height: 11px;
+    width: 11px;
+    right: 0.7px;
+    bottom: 0.7px;
+    @include status-property;
+  }
+}
+
+.avatars-w-40 {
+  position: relative;
+
+  .no-img, img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .no-img {
+    font-size: 12px;
+    @include no-image-property;
+  }
+
+  .status {
+    height: 10px;
+    width: 10px;
+    right: 0;
+    bottom: 0;
+    @include status-property;
+  }
+}
+
+.avatars-w-30 {
+  position: relative;
+
+  .no-img, img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .no-img {
+    font-size: 10px;
+    @include no-image-property;
+  }
+
+  .status {
+    height: 9px;
+    width: 9px;
+    right: -.5px;
+    bottom: -.5px;
+    @include status-property;
+  }
+}
+
+.avatars-w-20 {
+  position: relative;
+
+  .no-img, img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .no-img {
+    font-size: 8px;
+    @include no-image-property;
+  }
+
+  .status {
+    height: 8px;
+    width: 8px;
+    right: -1px;
+    bottom: -1px;
+    @include status-property;
+  }
+}
+
+/* Avatars Group */
+.avatar-group {
+  cursor: pointer;
+
+  .rounded-circle {
+    &:hover {
+      transform: translateY(-2px) scale(1.02);
+      transition: .5s;
+    }
+  }
+}
+
+.avatars-group-w-50 {
+
+  .no-img, img {
+    height: 50px;
+    width: 50px;
+    margin-left: -15px;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+  }
+
+  .no-img {
+    display: inline-flex !important;
+    @include no-image-property;
+    font-size: 14px;
+  }
+}
+
+.avatars-group-w-60 {
+  .no-img, img {
+    height: 60px;
+    width: 60px;
+    margin-left: -15px;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+  }
+
+  .no-img {
+    display: inline-flex !important;
+    @include no-image-property;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .avatars-with-shadow {
+    display: inline-block;
+  }
+}
+
+.avatar-bordered {
+  border: 2px solid var(--avaters-border-color) !important;
+}
+
+.avatar-shadow {
+  box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, .2) !important;
+}

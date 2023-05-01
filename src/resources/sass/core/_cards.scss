@@ -1,0 +1,145 @@
+@import "variables";
+@import "theme-colors";
+
+.card {
+  background-color: var(--default-card-bg);
+
+  .card-header {
+    border-color: var(--default-border-color);
+
+    .form-group-with-search {
+      margin-bottom: 0;
+      margin-left: auto;
+    }
+  }
+
+  .card-body {
+    padding: $default-card-padding;
+
+    &.body-hoverable {
+      height: 240px;
+      cursor: pointer;
+      transition: all $default-transition-duration $action-transition-timing-function;
+
+      &:hover {
+        transform: scale(1.01);
+        box-shadow: var(--default-box-shadow);
+      }
+
+      svg {
+        height: 50px;
+        width: 50px;
+        color: $white;
+        stroke-width: 0.7;
+      }
+    }
+  }
+
+  .card-footer {
+    border-color: var(--default-border-color);
+  }
+
+  &.card-with-shadow {
+    box-shadow: $default-card-shadow;
+  }
+
+  &.card-with-search {
+    .input-search-box {
+      width: 220px;
+    }
+  }
+
+  &.template-preview-card {
+    .template-preview-wrapper {
+      height: 300px;
+      font-size: 50%;
+      overflow: hidden;
+      position: relative;
+      border-radius: $default-radius;
+      box-shadow: var(--default-box-shadow);
+      transition: $default-transition-duration;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-clip: border-box;
+      cursor: pointer !important;
+
+      .v-html-wrapper {
+        zoom: 40%;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        @media (min-width: 992px) and (max-width: 1350px) {
+          zoom: 30%;
+        }
+
+        img {
+          max-width: 100% !important;
+        }
+
+        table {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+      }
+
+      .card-overlay-options {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        border: none;
+        height: 300px;
+        font-size: $default-font-size;
+        box-shadow: var(--default-box-shadow);
+        border-radius: $default-radius;
+        transition: $default-transition-duration;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          background-color: var(--default-card-bg);
+
+          li {
+            border: 0;
+            border-radius: 0;
+            background-color: var(--default-card-bg);
+
+            a {
+              color: var(--default-font-color);
+              transition: $default-transition-duration;
+
+              &:hover {
+                color: $brand-color;
+              }
+
+              svg {
+                height: 20px;
+                width: 20px;
+              }
+            }
+
+            &:first-child {
+              padding-top: $default-padding-margin;
+            }
+
+            &:last-child {
+              padding-bottom: $default-padding-margin;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .card-overlay-options {
+          opacity: .70;
+          transform: scale(1.03) !important;
+        }
+      }
+    }
+  }
+}

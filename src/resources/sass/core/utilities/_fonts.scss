@@ -1,0 +1,28 @@
+@import "../variables";
+@import "../theme-colors";
+
+.font-size-default {
+  font-size: $default-font-size !important;
+}
+
+.font-size-70 {
+  font-size: 70% !important;
+}
+
+.font-size-75 {
+  font-size: 75% !important;
+}
+
+.font-size-80 {
+  font-size: 80% !important;
+}
+
+.font-size-90 {
+  font-size: 90% !important;
+}
+
+@for $i from 1 through 100 {
+  .text-size-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}

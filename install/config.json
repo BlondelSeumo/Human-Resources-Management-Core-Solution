@@ -1,0 +1,53 @@
+{
+
+    "core": {
+        "min_php_version" : "8.0",
+        "min_mysql_version": "5.6"
+    },
+
+    "permissions" : {
+        ".env" : "644",
+        "config/gain.php": "644",
+        "bootstrap/" : "755",
+        "bootstrap/cache/" : "755",
+        "storage/" : "755",
+        "storage/logs/" : "755",
+        "storage/framework/": "755"
+    },
+    "requirements" : {
+        "php" : [
+            "openssl",
+            "pdo",
+            "pdo_mysql",
+            "mbstring",
+            "tokenizer",
+            "JSON",
+            "cURL",
+            "bcMath",
+            "fileinfo",
+            "XML",
+            "ctype",
+            "iconv",
+            "zip"
+        ],
+        "apache" : [
+            "mod_rewrite"
+        ]
+    },
+    "php_options" : {
+        "allow_url_fopen" : true,
+        "file_uploads" : true
+    },
+
+    "final" : {
+        "key" : true,
+        "publish" : false
+    },
+    "link": {
+        "php_version" : "https://payday.gainhq.com/documentation/server-requirement.html#php_version",
+        "php_environment" : "https://payday.gainhq.com/documentation/server-requirement.html#php_environment",
+        "php_options" : "https://payday.gainhq.com/documentation/server-requirement.html#php_option",
+        "mysql_version" : "https://payday.gainhq.com/documentation/server-requirement.html#mysql_version",
+        "folder_permissions" : "https://payday.gainhq.com/documentation/server-requirement.html#folder_permission"
+    }
+}

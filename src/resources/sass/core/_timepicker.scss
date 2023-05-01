@@ -1,0 +1,184 @@
+@import "variables";
+@import "theme-colors";
+
+.time-picker-input {
+  cursor: pointer;
+
+  .form-control {
+    text-align: left;
+    border: none !important;
+  }
+
+  .input-group-text {
+    border: none !important;
+    background-color: var(--form-control-bg);
+
+    svg {
+      stroke-width: 1;
+      color: $brand-color;
+    }
+
+    .clear-icon {
+      cursor: pointer;
+      margin-right: 0.75rem;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        stroke-width: 1;
+        padding: 0.1rem;
+        border-radius: 50%;
+        box-shadow: var(--shadow-x-icon);
+        background-color: var(--bg-x-icon);
+      }
+    }
+  }
+
+  .input-group {
+    border: 1px solid var(--btn-filter-bg) !important;
+    border-color: var(--default-border-color) !important;
+    border-radius: 5px !important;
+  }
+
+  .keep-inside-clicks-open {
+    &.show {
+      .input-group {
+        border-color: $brand-color !important;
+      }
+    }
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      min-height: 50px;
+      min-width: max-content;
+      border: none !important;
+      background-color: transparent;
+      box-shadow: var(--default-box-shadow) !important;
+      @extend .dropdownAnimation;
+
+      &.show {
+        top: 100% !important;
+      }
+
+      &:before, &:after {
+        width: 0;
+        height: 0;
+        content: '';
+        z-index: 2;
+        position: absolute;
+      }
+
+      .dropdown-item {
+        &.active {
+          color: $forms-input-text-color !important;
+          background-color: var(--base-color) !important;
+        }
+
+        &.selected {
+          color: $forms-input-text-color !important;
+          background-color: var(--base-color) !important;
+
+          .check-sign {
+            display: block;
+          }
+        }
+
+        &:hover {
+          background-color: var(--base-color) !important;
+          color: $forms-input-text-color !important;
+        }
+      }
+
+      .hour, .minute, .am-pm {
+        float: left;
+        height: 250px;
+        min-width: 73px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: var(--time-picker-bg);
+
+        &::-webkit-scrollbar-thumb {
+          background-color: var(--scrollbar-thumb-color);
+
+          &:hover {
+            background-color: var(--scrollbar-thumb-hover-color);
+          }
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: var(--base-color);
+        }
+
+        li {
+          font-size: 90% !important;
+          color: var(--default-font-color) !important;
+
+          &:hover {
+            background-color: var(--base-color) !important;
+          }
+        }
+      }
+
+      .hour {
+        border-top-left-radius: $default-radius;
+        border-bottom-left-radius: $default-radius;
+      }
+
+      .am-pm {
+        overflow: hidden !important;
+        border-top-right-radius: $default-radius;
+        border-bottom-right-radius: $default-radius;
+      }
+
+      @media (max-width: 399px) {
+        .hour, .minute {
+          width: 50%;
+          height: 120px;
+        }
+        .am-pm {
+          width: 100%;
+          height: 96px;
+        }
+      }
+      @media (min-width: 500px) {
+        .hour, .minute, .am-pm {
+          min-width: 120px;
+        }
+      }
+    }
+
+    .dropdown-menu[x-placement^="left"],
+    .dropdown-menu[x-placement^="right"],
+    .dropdown-menu[x-placement^="top"] {
+      top: auto !important;
+      -webkit-animation: none !important;
+      animation: none !important;
+    }
+
+    .dropdown-menu[x-placement^="bottom-start"] {
+      margin-top: 7px !important;
+
+      &:before {
+        top: -7px;
+        left: 15px;
+        border-bottom: 7px solid var(--dropdown-menu-bg);
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+      }
+    }
+
+    .dropdown-menu[x-placement^="top-start"] {
+      top: 0 !important;
+      margin-bottom: 7px !important;
+
+      &:after {
+        bottom: -7px;
+        left: 15px;
+        border-top: 7px solid var(--dropdown-menu-bg);
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+      }
+    }
+  }
+}

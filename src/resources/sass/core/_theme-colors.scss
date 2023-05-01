@@ -1,0 +1,129 @@
+@import "variables";
+
+:root {
+  --base-color: #{$base-color};
+  --default-font-color: #313131;
+  --default-border-color: #F0F2F5;
+  --dropdown-menu-bg: #{$white};
+  --default-card-bg: #{$white};
+  --default-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  --vertical-tab-header-bg: #fbfcff;
+  --vertical-tab-icon-shadow: none;
+  --vertical-tab-icon-bg: #{$white};
+  --accordion-header-bg: #{$base-color};
+  --default-custom-control-bg: #{$white};
+  --authentication-form-bg: #{$white};
+  --range-slider-baseline-bg: #{$default-secondary-color};
+  --tab-step-before-bg: #{$white};
+  --modal-header-footer-bg: #{$white};
+  --modal-body-bg: #{$white};
+  --note-font-color: var(--default-font-color);
+  --note-bg-color: rgba(255, 204, 23, 0.09);
+  --avaters-border-color: #{$white};
+  --avatars-box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, .2);
+  --success-toast-bg: #{$sidebar-dark-bg};
+  --scrollbar-thumb-color: #{lighten($brand-color, 30)};
+  --scrollbar-thumb-hover-color: #{lighten($brand-color, 20)};
+  --not-found-opacity: 1;
+  --kanban-scrollbar-track: #{lighten($sidebar-scrollbar-thumb-color, 55%)};
+  --kanban-scrollbar-thumb: #{lighten($sidebar-scrollbar-thumb-color, 45%)};
+  --vue-toaster-bg: rgba(0, 0, 0, 0.8);
+  --white-base-color: #{$white};
+  --avatar-no-image-bg: #898989;
+  --avatar-no-image-font: #{$white};
+
+  // Layouts Variables
+  --navbar-bg: #{$white};
+  --sidebar-bg: #{$sidebar-dark-bg};
+  --navbar-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  --navbar-brand-bg: #{darken($sidebar-dark-bg, 6%)};
+  --sidebar-box-shadow: none;
+  --menu-title-shadow: none;
+  --submenu-shadow: none;
+
+  // Buttons Variables
+  --btn-light-bg: #{$white};
+  --btn-light-color: #f8f9fa;
+  --btn-dark-color: #343a40;
+  --btn-dark-hover-color: #{darken(#343a40, 5%)};
+  --btn-secondary-bg: #{$default-secondary-color};
+  --btn-secondary-hover-bg: #{darken($default-secondary-color, 10%)};
+  --icon-hover-bg: #{lighten($brand-color, 35%)};
+  --btn-filter-bg: #{$white};
+
+  // Form & Input Variables
+  --input-search-box-border: #{$default-light-color};
+  --form-control-bg: #{$white};
+  --calendar-bg: #{$white};
+  --bg-x-icon: #{lighten($brand-color, 35%)};
+  --shadow-x-icon: none;
+  --search-box-bg: #{$white};
+  --bg-input-readonly: #e9ecef;
+  --chips-bg: #{$white};
+  --time-picker-bg: #{$white};
+  --search-result-dropdown-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
+}
+
+[theme="dark"] {
+  --base-color: #{darken($sidebar-dark-bg, 7%)};
+  --default-font-color: #{darken($white, 20%)};
+  --default-border-color: #{lighten($sidebar-dark-bg, 2%)};
+  --dropdown-menu-bg: #{darken($sidebar-dark-bg, 3%)};
+  --default-card-bg: #{darken($sidebar-dark-bg, 2%)};
+  --default-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  --vertical-tab-header-bg: #{lighten($sidebar-dark-bg, 0.2%)};
+  --vertical-tab-icon-shadow: none;
+  --vertical-tab-icon-bg: #{darken($sidebar-dark-bg, 2%)};
+  --accordion-header-bg: #{darken($sidebar-dark-bg, 5%)};
+  --default-custom-control-bg: #{darken($sidebar-dark-bg, 2%)};
+  --icon-hover-bg: var(--base-color);
+  --authentication-form-bg: #{darken($sidebar-dark-bg, 2%)};
+  --range-slider-baseline-bg: var(--base-color);
+  --calendar-bg: #{darken($sidebar-dark-bg, 2%)};
+  --tab-step-before-bg: #{darken($sidebar-dark-bg, 2%)};
+  --modal-header-footer-bg: #{darken($sidebar-dark-bg, 1%)};
+  --modal-body-bg: #{darken($sidebar-dark-bg, 2%)};
+  --note-font-color: #{$black};
+  --note-bg-color: rgba(255, 204, 23, 0.05);
+  --avaters-border-color: var(--sidebar-bg);
+  --avatars-box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, .2);
+  --success-toast-bg: #{$sidebar-dark-bg};
+  --scrollbar-thumb-color: #{$sidebar-scrollbar-thumb-color};
+  --scrollbar-thumb-hover-color: #{$sidebar-scrollbar-thumb-color};
+  --not-found-opacity: .7;
+  --search-result-dropdown-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  --kanban-scrollbar-track: #{lighten($sidebar-scrollbar-thumb-color, 10%)};
+  --kanban-scrollbar-thumb: #{darken($sidebar-scrollbar-thumb-color, 5%)};
+  --vue-toaster-bg: rgba(39, 43, 53, 0.9);
+  --white-base-color: var(--base-color);
+  --avatar-no-image-bg: #3A3C43;
+  --avatar-no-image-font: #797D8D;
+
+  // Layouts Variables
+  --navbar-bg: #{darken($sidebar-dark-bg, 3%)};
+  --sidebar-bg: #{darken($sidebar-dark-bg, 3%)};
+  --navbar-box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.09);
+  --navbar-brand-bg: #{$sidebar-dark-bg};
+  --sidebar-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  --menu-title-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.3);
+  --submenu-shadow: 2px 1px 1px 0px rgba(0, 0, 0, 0.3);
+
+  // Buttons Variables
+  --btn-light-bg: #{darken($sidebar-dark-bg, 2%)};
+  --btn-light-color: #{lighten($sidebar-dark-bg, 2%)};
+  --btn-dark-color: #{darken($sidebar-dark-bg, 9%)};
+  --btn-dark-hover-color: #{darken($sidebar-dark-bg, 6%)};
+  --btn-secondary-bg: #414244;
+  --btn-secondary-hover-bg: #{darken(#414244, 10%)};
+  --btn-filter-bg: #{darken($sidebar-dark-bg, 2%)};
+
+  // Form & Input Variables
+  --input-search-box-border: transparent;
+  --form-control-bg: #{darken($sidebar-dark-bg, 5%)};
+  --bg-x-icon: #{darken($sidebar-dark-bg, 2%)};
+  --shadow-x-icon: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  --search-box-bg: #{darken($sidebar-dark-bg, 5%)};
+  --bg-input-readonly: #{darken($sidebar-dark-bg, 1%)};
+  --chips-bg: #{darken($sidebar-dark-bg, 2%)};
+  --time-picker-bg: #{darken($sidebar-dark-bg, 2%)};
+}

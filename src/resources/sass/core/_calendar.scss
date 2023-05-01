@@ -1,0 +1,164 @@
+@import "variables";
+
+// Full calendar
+.calendar-view {
+
+  .fc-event {
+    background-color: #a3b4f9 !important;
+    padding: 5px !important;
+    border-radius: 5px !important;
+    color: $white !important;
+    border: none !important;
+    font-weight: inherit;
+    box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, .2) !important;
+    margin-right: .5rem;
+  }
+
+  .fc-button-group {
+    border-radius: 0.3rem !important;
+    background: var(--btn-filter-bg) !important;
+
+    .fc-button {
+      border: 1px solid var(--default-border-color) !important;
+      background: var(--btn-filter-bg) !important;
+      color: #919191 !important;
+      text-transform: capitalize !important;
+      box-shadow: none !important;
+
+      &:hover {
+        color: $brand-color !important;
+      }
+
+      &.fc-button-active {
+        box-shadow: none !important;
+        border-radius: 0.3rem;
+        background-color: $brand-color !important;
+        border: 1px solid $brand-color !important;
+        color: $white !important;
+      }
+    }
+  }
+
+  .fc-today-button {
+    border: 1px solid var(--default-border-color) !important;
+    text-transform: capitalize !important;
+    background: var(--btn-filter-bg) !important;
+    color: #919191 !important;
+    border-radius: 0.3rem !important;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  .fc-prev-button, .fc-next-button {
+    &.fc-button {
+      box-shadow: none !important;
+      border: none !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      color: #919191 !important;
+
+      &:hover {
+        color: $brand-color !important;
+        background: transparent !important;
+      }
+    }
+  }
+
+  .fc-timegrid {
+
+    .fc-scrollgrid {
+      tbody {
+        .fc-scrollgrid-section {
+          &:nth-child(1), &:nth-child(2) {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    .fc-timegrid-slot {
+      height: 60px !important;
+    }
+
+    .fc-timegrid-body {
+      width: 100% !important;
+
+      table {
+        width: 100% !important;
+      }
+    }
+
+    .fc-col-header {
+      width: 100% !important;
+    }
+
+    .fc-timegrid-axis-frame {
+      justify-content: center !important;
+    }
+  }
+
+  .fc-theme-standard td, .fc-theme-standard th {
+    border-color: var(--default-border-color) !important;
+  }
+
+  .fc-scrollgrid {
+    border-color: var(--default-border-color) !important;
+  }
+
+  .fc-daygrid {
+    .fc-day-today {
+      background: $brand-color !important;
+    }
+  }
+
+  .fc-timeGridWeek-view {
+
+    .fc-day-today {
+      background: none !important;
+
+      &.fc-col-header-cell {
+        background: $brand-color !important;
+        color: $white !important;
+      }
+    }
+  }
+
+  .fc-timeGridDay-view {
+    .fc-day-today {
+      background: none !important;
+    }
+  }
+
+  .fc-header-toolbar {
+    h2 {
+      color: #919191 !important;
+      font-size: 20px !important;
+    }
+  }
+
+  .fc-scroller {
+    &::-webkit-scrollbar {
+      width: $default-scrollbar-width !important;
+    }
+
+    &::-webkit-scrollbar-track {
+      //background: var(--scrollbar-thumb-color) !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-thumb-color) !important;
+      border-radius: 5px !important;
+
+      &:hover {
+        background-color: var(--scrollbar-thumb-hover-color) !important;
+      }
+    }
+
+  }
+
+  .fc-col-header-cell-cushion {
+    padding: 10px 5px !important;
+  }
+}

@@ -1,0 +1,58 @@
+@media (min-width: 576px) and (max-width: 768px) {
+
+  // Filters
+  .filters-wrapper {
+    .mobile-filters-wrapper {
+      display: contents;
+    }
+  }
+
+  .calendar-root {
+    .calendar {
+      width: 500px;
+
+      .calendar_preset {
+        margin-bottom: 0.8rem;
+        display: inline-block;
+
+        li {
+          width: auto;
+          display: block;
+          line-height: 1.6em;
+          padding: 0 0 0 18px;
+          margin: 5px 0 !important;
+        }
+      }
+
+      .calendar-wrap {
+        width: 100%;
+        float: none;
+      }
+
+      .calendar_month_left, .calendar_month_right {
+        margin: 0 !important;
+        float: left;
+        padding-bottom: 0 !important;
+        width: 50% !important;
+      }
+
+      .calendar-range {
+        border: 0;
+        margin: 0;
+        width: 100%;
+        float: none;
+        text-align: center;
+      }
+
+      .calendar_preset-ranges {
+        float: left;
+
+        .custom-radio-default {
+          .custom-control-inline {
+            display: table-cell;
+          }
+        }
+      }
+    }
+  }
+}

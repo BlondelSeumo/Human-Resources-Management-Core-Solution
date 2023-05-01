@@ -1,0 +1,109 @@
+.chart-data-list {
+  .data-group-item {
+    border: 0;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 1.25rem;
+    background-color: transparent;
+
+    .square {
+      width: 14px;
+      height: 14px;
+      min-width: 14px;
+      min-height: 14px;
+      margin-right: 5px;
+      display: inline-block;
+      border-radius: 0.2rem;
+    }
+
+    .value {
+      font-size: 90%;
+      margin-left: 5px;
+      color: var(--default-font-color);
+    }
+  }
+}
+
+// Organization chart
+.orgchart-container {
+  border: none !important;
+  width: 100% !important;
+
+  .orgchart {
+    background-image: none;
+
+    .node {
+      width: 150px;
+      //border: 1px solid var(--default-border-color) !important;
+      border: none !important;
+      padding: 0;
+      margin: 0 3px;
+      border-radius: 4px;
+      box-shadow: var(--default-box-shadow) !important;
+
+      &:hover {
+        background-color: transparent !important;
+        cursor: pointer !important;
+      }
+
+      .title {
+        background-color: $brand-color !important;
+        border: none !important;
+
+        .symbol {
+          display: none !important;
+        }
+      }
+
+      .content {
+        border: none !important;
+        color: var(--default-font-color) !important;
+        background-color: var(--chips-bg) !important;
+      }
+    }
+
+    .lines {
+      .downLine {
+        background-color: $brand-color;
+      }
+
+      .topLine {
+        border-color: $brand-color;
+      }
+
+      .leftLine {
+        border-color: $brand-color;
+      }
+
+      .rightLine {
+        border-color: $brand-color;
+      }
+    }
+
+  }
+
+  &::-webkit-scrollbar {
+    width: $default-scrollbar-width;
+    height: $default-scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-thumb-color);
+
+      &:hover {
+        background-color: var(--scrollbar-thumb-hover-color);
+      }
+    }
+  }
+}

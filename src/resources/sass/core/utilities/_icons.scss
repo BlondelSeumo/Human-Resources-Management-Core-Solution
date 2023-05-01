@@ -1,0 +1,26 @@
+@import "../variables";
+@import "../theme-colors";
+
+// '.' or Circle Icon
+.dot-icon {
+  border-radius: 100%;
+  display: inline-block;
+  background-color: $muted-color;
+
+  @for $i from 1 through 100 {
+    &.size-#{$i} {
+      width: #{$i}px !important;
+      height: #{$i}px !important;
+    }
+  }
+}
+
+// SVG Icon
+svg {
+  @for $i from 1 through 100 {
+    &.size-#{$i} {
+      width: #{$i}px !important;
+      height: #{$i}px !important;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "variables";
+@import "theme-colors";
+
+.accordion {
+  .card {
+    border-color: var(--default-border-color);
+
+    .card-header {
+      background-color: var(--accordion-header-bg);
+
+      .collapsible-link {
+        color: var(--default-font-color);
+
+        &::before {
+          content: '';
+          width: 14px;
+          height: 2px;
+          background: var(--default-font-color);
+          position: absolute;
+          top: calc(50% - 1px);
+          right: 1rem;
+          display: block;
+          transition: all 0.3s;
+          opacity: 0.5;
+        }
+
+        &::after {
+          content: '';
+          width: 2px;
+          height: 14px;
+          background: var(--default-font-color);
+          position: absolute;
+          top: calc(50% - 7px);
+          right: calc(1rem + 6px);
+          display: block;
+          transition: all 0.3s;
+          opacity: 0.5;
+        }
+
+        &[aria-expanded='true'] {
+          &::after {
+            transform: rotate(90deg) translateX(-1px);
+          }
+
+          &::before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}

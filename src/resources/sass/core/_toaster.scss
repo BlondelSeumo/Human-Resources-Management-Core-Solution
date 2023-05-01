@@ -1,0 +1,81 @@
+@import "variables";
+@import "theme-colors";
+
+// Vue Toaster
+.toast-container {
+  width: 280px !important;
+
+  &.toast-top-right {
+    right: 8px;
+    top: $navbar-height + 8px;
+  }
+
+  .vueToaster {
+    opacity: 1 !important;
+    border: 0 !important;
+    width: 280px !important;
+    border-radius: 0 !important;
+    font-family: $type-1 !important;
+    border-left: 6px solid !important;
+    padding: 15px 15px 15px 15px !important;
+    background-position: -100% center !important;
+    background-color: var(--vue-toaster-bg) !important;
+    box-shadow: var(--default-box-shadow) !important;
+    animation: slideInRight 0.6s, slideOutRight 0.6s 2.7s;
+    -webkit-animation: slideInRight 0.6s, slideOutRight 0.6s 2.7s;
+
+    .toast-title {
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+
+    &.toast-success {
+      border-color: $green !important;
+    }
+
+    &.toast-error {
+      border-color: $danger-color !important;
+    }
+
+    &.toast-info {
+      border-color: $info-color !important;
+    }
+
+    &.toast-warning {
+      border-color: $warning-color !important;
+    }
+
+    .toast-progress {
+      height: 0 !important;
+      opacity: 0 !important;
+      display: none !important;
+    }
+  }
+}
+
+// Sweet Alert
+.swal2-popup {
+  min-height: 16em;
+  font-family: "Poppins", sans-serif !important;
+  background: var(--modal-body-bg) !important;
+
+  .swal2-title, .swal2-content {
+    color: var(--default-font-color) !important;
+  }
+
+  .swal2-actions {
+    button {
+      padding: .45rem 1.2rem;
+      font-size: inherit !important;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, .25) !important;
+
+      &.swal2-cancel {
+        background-color: var(--btn-secondary-bg);
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../variables";
+@import "../theme-colors";
+
+.pagination {
+  border-radius: $default-radius;
+
+  .page-item {
+    &:focus {
+      outline: none;
+    }
+
+    .page-link {
+      padding: 0;
+      margin-right: 10px;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:hover {
+        background-color: lighten($brand-color, 35%) !important;
+      }
+
+      svg {
+        height: 18px;
+        width: 18px;
+        stroke-width: 1.7;
+      }
+
+      &.active {
+        color: $white;
+        background-color: $brand-color;
+
+        &:hover {
+          color: $white;
+          background-color: $brand-color !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+    "name": "altek/eventually",
+    "description": "The missing many-to-many Eloquent events.",
+    "keywords": [
+        "attach",
+        "detach",
+        "eloquent",
+        "events",
+        "eventually",
+        "laravel",
+        "lumen",
+        "many-to-many",
+        "pivot",
+        "relations",
+        "sync",
+        "toggle",
+        "update"
+    ],
+    "homepage": "https://altek.gitlab.io/eventually",
+    "type": "package",
+    "license": "MIT",
+    "support": {
+        "issues": "https://gitlab.com/altek/eventually/issues",
+        "source": "https://gitlab.com/altek/eventually"
+    },
+    "authors": [
+        {
+            "name": "Quetzy Garcia",
+            "email": "quetzyg@altek.org"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/database": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0|^7.0|^8.0",
+        "roave/security-advisories": "dev-latest"
+    },
+    "autoload": {
+        "psr-4": {
+            "Altek\\Eventually\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Altek\\Eventually\\Tests\\": "tests/",
+            "Altek\\Eventually\\Tests\\Database\\Factories\\": "tests/database/factories"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        }
+    }
+}

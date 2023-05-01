@@ -1,0 +1,1055 @@
+@import "variables";
+@import "theme-colors";
+
+@mixin form-inputs {
+  height: auto !important;
+  font-size: 100% !important;
+  border-radius: 5px !important;
+  padding: $default-input-box-padding !important;
+  border-color: var(--default-border-color) !important;
+}
+
+@mixin input-select-options-icon {
+  background-repeat: no-repeat !important;
+  background-size: 15px !important;
+  background-position-x: 97% !important;
+  background-position-y: 50% !important;
+}
+
+@mixin custom-control-lg {
+  .custom-control-label {
+    &:before {
+      width: 1rem;
+      height: 1rem;
+      margin-left: 4.4px;
+      transform: scale(1.35) !important;
+    }
+
+    &:after {
+      width: 1rem;
+      height: 1rem;
+      margin-left: 5px;
+      transform: scale(1.55) !important;
+    }
+  }
+}
+
+@mixin custom-control-level-before {
+  color: $white;
+  background-color: $white;
+}
+
+label {
+  color: var(--default-font-color) !important;
+}
+
+.col-form-label {
+  padding-top: calc(0.375rem + 4px);
+  padding-bottom: calc(0.375rem + 3px);
+}
+
+::placeholder {
+  color: $muted-color !important;
+}
+
+select {
+  @include form-inputs;
+  @include input-select-options-icon;
+  color: var(--default-font-color) !important;
+
+  &.custom-select {
+    color: var(--default-font-color) !important;
+    background-color: var(--form-control-bg) !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+    border-color: $inputs-focus-color !important;
+  }
+}
+
+textarea {
+  font-size: 100% !important;
+  border-radius: 5px !important;
+  padding: $default-input-box-padding !important;
+  border-color: var(--default-border-color) !important;
+  color: var(--default-font-color);
+  background-color: var(--form-control-bg);
+  display: block;
+  width: 100%;
+  outline: none;
+  font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:focus {
+    box-shadow: none;
+    color: var(--default-font-color);
+    background-color: var(--form-control-bg);
+    border-color: $inputs-focus-color !important;
+  }
+}
+
+.form-control {
+  @include form-inputs;
+  color: var(--default-font-color);
+  background-color: var(--form-control-bg);
+
+  &:focus {
+    box-shadow: none;
+    color: var(--default-font-color);
+    background-color: var(--form-control-bg);
+    border-color: $inputs-focus-color !important;
+  }
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: var(--bg-input-readonly);
+}
+
+// Form group with icon
+.form-group-with-icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .form-control {
+    background-color: var(--form-control-bg);
+
+    &.text-right-padding {
+      padding-right: 44px !important;
+    }
+  }
+
+  .form-control-feedback {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 0 14px;
+    color: lighten($muted-color, 5%);
+    transition: all $default-transition-duration $action-transition-timing-function;
+
+    &.disabled {
+      color: lighten($muted-color, 23%);
+    }
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}
+
+// For custom input vertically alignments
+.custom-control {
+  .custom-control-label {
+    color: $light-layout-secondary-font-color !important;
+    padding-top: 1px !important;
+  }
+}
+
+.custom-checkbox {
+  .custom-control-label {
+    &::before {
+      border-radius: 0.18rem;
+    }
+  }
+}
+
+.custom-checkbox-default {
+  .custom-control-label {
+    &:before {
+      background-color: var(--default-custom-control-bg);
+    }
+  }
+
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='blue' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    @include custom-control-level-before;
+    border-color: $brand-color;
+    background-color: var(--default-custom-control-bg);
+  }
+
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+    background-color: var(--default-custom-control-bg);
+  }
+
+  @include custom-control-lg;
+}
+
+.custom-checkbox-primary {
+  .custom-control-label {
+    &:before {
+      border-color: $brand-color;
+      background-color: var(--default-custom-control-bg);
+    }
+  }
+
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='blue' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    @include custom-control-level-before;
+    border-color: $brand-color;
+    background-color: var(--default-custom-control-bg);
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    color: $brand-color !important;
+  }
+
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+    background-color: var(--default-custom-control-bg);
+  }
+
+  @include custom-control-lg;
+}
+
+.custom-checkbox-success {
+  .custom-control-label {
+    &:before {
+      border-color: $green;
+      background-color: var(--default-custom-control-bg);
+    }
+  }
+
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='green' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    @include custom-control-level-before;
+    border-color: $green;
+    background-color: var(--default-custom-control-bg);
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    color: $green !important;
+  }
+
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+    background-color: var(--default-custom-control-bg);
+  }
+
+  @include custom-control-lg;
+}
+
+.custom-checkbox-warning {
+  .custom-control-label {
+    &:before {
+      border-color: $orange;
+      background-color: var(--default-custom-control-bg);
+    }
+  }
+
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='orange' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    @include custom-control-level-before;
+    border-color: $orange;
+    background-color: var(--default-custom-control-bg);
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    color: $orange !important;
+  }
+
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+    background-color: var(--default-custom-control-bg);
+  }
+
+  @include custom-control-lg;
+}
+
+.custom-checkbox-info {
+  .custom-control-label {
+    &:before {
+      border-color: rebeccapurple;
+      background-color: var(--default-custom-control-bg);
+    }
+  }
+
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='rebeccapurple' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    @include custom-control-level-before;
+    border-color: rebeccapurple;
+    background-color: var(--default-custom-control-bg);
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    color: rebeccapurple !important;
+  }
+
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+    background-color: var(--default-custom-control-bg);
+  }
+
+  @include custom-control-lg;
+}
+
+// Checkbox customized design
+.customized-checkbox {
+  input {
+    opacity: 0;
+    position: absolute;
+
+    & + label {
+      padding: 0;
+      cursor: pointer;
+      position: relative;
+    }
+
+    // Box.
+    & + label:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      background: transparent;
+      border: 1px solid;
+      border-radius: 0.18rem;
+    }
+
+    // Disabled state label.
+    &:disabled + label {
+      opacity: 0.7;
+      cursor: auto;
+    }
+
+    // Disabled box.
+    &:disabled + label:before {
+      opacity: 0.5;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 4.5px;
+      top: 9px;
+      width: 2.45px;
+      height: 2.45px;
+      transform: rotate(45deg);
+    }
+  }
+
+  &.checkbox-default {
+    input {
+
+      // Box.
+      & + label:before {
+        border-color: #adb5bd;
+      }
+
+      // Box checked
+      &:checked + label:before {
+        border-color: $brand-color;
+      }
+
+      // Checkmark. Could be replaced with an image
+      &:checked + label:after {
+        background: $brand-color;
+        box-shadow: 2px 0 0 $brand-color,
+        4px 0 0 $brand-color,
+        4px -2px 0 $brand-color,
+        4px -4px 0 $brand-color,
+        4px -6px 0 $brand-color,
+        4px -8px 0 $brand-color;
+      }
+    }
+  }
+
+  &.checkbox-success {
+    input {
+
+      // Box.
+      & + label:before {
+        border-color: $success-color;
+      }
+
+      // Box checked
+      &:checked + label:before {
+        border-color: $success-color;
+      }
+
+      // Checkmark. Could be replaced with an image
+      &:checked + label:after {
+        background: $success-color;
+        box-shadow: 2px 0 0 $success-color,
+        4px 0 0 $success-color,
+        4px -2px 0 $success-color,
+        4px -4px 0 $success-color,
+        4px -6px 0 $success-color,
+        4px -8px 0 $success-color;
+      }
+    }
+  }
+
+  &.checkbox-warning {
+    input {
+
+      // Box.
+      & + label:before {
+        border-color: $warning-color;
+      }
+
+      // Box checked
+      &:checked + label:before {
+        border-color: $warning-color;
+      }
+
+      // Checkmark. Could be replaced with an image
+      &:checked + label:after {
+        background: $warning-color;
+        box-shadow: 2px 0 0 $warning-color,
+        4px 0 0 $warning-color,
+        4px -2px 0 $warning-color,
+        4px -4px 0 $warning-color,
+        4px -6px 0 $warning-color,
+        4px -8px 0 $warning-color;
+      }
+    }
+  }
+
+  &.checkbox-info {
+    input {
+
+      // Box.
+      & + label:before {
+        border-color: $info-color;
+      }
+
+      // Box checked
+      &:checked + label:before {
+        border-color: $info-color;
+      }
+
+      // Checkmark. Could be replaced with an image
+      &:checked + label:after {
+        background: $info-color;
+        box-shadow: 2px 0 0 $info-color,
+        4px 0 0 $info-color,
+        4px -2px 0 $info-color,
+        4px -4px 0 $info-color,
+        4px -6px 0 $info-color,
+        4px -8px 0 $info-color;
+      }
+    }
+  }
+}
+
+// Radio button customized design
+.customized-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  margin: 0 1rem 0 0;
+  display: inline-block;
+
+  &.disabled {
+    opacity: .7;
+
+    .outside {
+      background-color: var(--bg-input-readonly);
+    }
+  }
+
+  input {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+
+  .outside {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -12px;
+    border: 1px solid;
+    border-radius: 50%;
+    background: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    .inside {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      transform: scale(0, 0);
+      -webkit-transform: scale(0, 0);
+    }
+  }
+
+  input:checked + .outside .inside {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    animation: radio-select 0.1s linear;
+    -webkit-animation: radio-select 0.1s linear;
+  }
+
+  &.mini {
+    padding-left: 20px;
+
+    .outside {
+      width: 16px;
+      height: 16px;
+      margin-top: -8px;
+
+      .inside {
+        top: 2.8px;
+        left: 3px;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  &.radio-default {
+    .outside {
+      border-color: $brand-color;
+
+      .inside {
+        background: $brand-color;
+      }
+    }
+  }
+
+  &.radio-primary {
+    .outside {
+      border-color: $brand-color;
+
+      .inside {
+        background: $brand-color;
+      }
+    }
+  }
+
+  &.radio-success {
+    .outside {
+      border-color: $success-color;
+
+      .inside {
+        background: $success-color;
+      }
+    }
+  }
+
+  &.radio-warning {
+    .outside {
+      border-color: $warning-color;
+
+      .inside {
+        background: $warning-color;
+      }
+    }
+  }
+
+  &.radio-info {
+    .outside {
+      border-color: $info-color;
+
+      .inside {
+        background: $info-color;
+      }
+    }
+  }
+}
+
+// Radios Button Group
+.radio-button-group {
+  .btn-group {
+    border-radius: 0.3rem;
+    display: initial !important;
+
+    &:focus {
+      outline: none;
+    }
+
+    .btn {
+      padding: 10px 1.2rem;
+      background: transparent;
+
+      &.focus {
+        box-shadow: none;
+      }
+
+      &.active {
+        box-shadow: none;
+        border-radius: 0.3rem;
+        background-color: $brand-color;
+        border: 1px solid $brand-color !important;
+        -webkit-transition: all $default-transition-duration ease-in-out;
+        -moz-transition: all $default-transition-duration ease-in-out;
+        -o-transition: all $default-transition-duration ease-in-out;
+        -ms-transition: all $default-transition-duration ease-in-out;
+        transition: all $default-transition-duration ease-in-out;
+
+        span {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// Custom switch design
+.border-switch {
+  min-height: initial;
+  color: $brand-color;
+  padding-left: 0;
+
+  .border-switch-control-input {
+    display: none;
+
+    &:checked ~ .border-switch-control-indicator {
+      border-color: $brand-color;
+
+      &::after {
+        left: 14px;
+        background-color: $brand-color;
+      }
+    }
+  }
+
+  .border-switch-control-indicator {
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 20px;
+    border-radius: 16px;
+    transition: .3s;
+    border: 2px solid #ccc;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      transition: .3s;
+      top: 2px;
+      left: 2px;
+      background: #ccc;
+    }
+  }
+}
+
+// Chips With Dropdown Search & Select
+.chips-container {
+  cursor: pointer;
+  overflow-y: auto;
+  min-height: 70px;
+  max-height: 350px;
+  border-radius: 5px;
+  color: $forms-input-text-color;
+  background-color: var(--base-color);
+
+  .add {
+    transition: color $default-transition-duration $action-transition-timing-function;
+
+    &:hover {
+      color: darken($forms-input-text-color, 20%);
+    }
+  }
+
+  .chips {
+    font-size: 90%;
+    border-radius: 22px;
+    background-color: var(--chips-bg);
+    box-shadow: var(--default-box-shadow);
+    padding: 0.35rem 0.45rem 0.35rem 1rem;
+
+    .delete-chips {
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: var(--base-color);
+    }
+  }
+}
+
+.chips-dropdown {
+  .dropdown-menu {
+    top: auto !important;
+    @extend .dropdownAnimation;
+  }
+}
+
+// Wizard Steps Scss code here
+.wizard-steps {
+  font-size: 90% !important;
+
+  hr {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .nav-link {
+    padding: 0;
+
+  }
+
+  .tab-step {
+    height: 40px;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--base-color);
+    position: relative;
+    color: $wizard-step-btn-default-color;
+    padding-right: 16px;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+
+  .tab-step-init {
+    height: 40px;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--base-color);
+    position: relative;
+    color: $wizard-step-btn-default-color;
+    padding: 9px 16px 0 16px;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+
+  .tab-step:before {
+    width: 20px;
+    height: 42px;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--tab-step-before-bg);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16px;
+    margin-top: -1px !important;
+    content: '';
+  }
+
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background: none;
+  }
+
+  .nav-link.active {
+    .tab-step, .tab-step-init {
+      color: $white;
+      background-color: $brand-color;
+    }
+  }
+
+  .nav-pills {
+    .nav-item {
+      margin-bottom: 5px;
+      margin-top: 5px;
+      margin-left: -13px !important;
+
+      &:first-child {
+        margin-left: 0 !important;
+        z-index: 105;
+      }
+    }
+
+    @for $i from 2 through 50 {
+      .nav-item:nth-child(#{$i}) {
+        z-index: 20-$i;
+        margin-left: -10px;
+      }
+    }
+
+  }
+}
+
+// Summernote Editor Design Started Here
+.note-frame {
+  height: initial !important;
+  border: 1px solid var(--default-border-color) !important;
+
+  &.card {
+    height: initial !important;
+  }
+
+  .card-header {
+    padding: 1rem;
+    background: transparent;
+    border-color: var(--default-border-color);
+
+    &.note-toolbar {
+      padding: 5px;
+    }
+
+    .note-btn-group {
+      margin-top: 0 !important;
+
+      .dropdown-toggle, .note-btn {
+        color: var(--default-font-color);
+        border-color: var(--default-border-color);
+        background-color: var(--btn-light-bg) !important;
+      }
+
+      .note-dropdown-menu {
+        border-color: var(--default-border-color);
+        background-color: var(--btn-light-bg) !important;
+
+        .dropdown-item {
+          color: var(--default-font-color);
+
+          pre {
+            color: var(--default-font-color);
+          }
+
+          &:hover {
+            color: var(--default-font-color);
+            background-color: var(--base-color);
+          }
+        }
+
+        .note-palette {
+          .note-palette-title {
+            color: var(--default-font-color);
+          }
+
+          .note-color-reset {
+            &:hover {
+              color: var(--default-font-color);
+              background-color: var(--base-color);
+            }
+          }
+        }
+
+        .note-dimension-display {
+          color: var(--default-font-color);
+        }
+
+        &.dropdown-fontname {
+          .dropdown-item {
+            .note-icon-menu-check {
+              visibility: initial;
+              font-style: initial;
+              color: var(--default-font-color);
+            }
+
+            &.checked {
+              background-color: var(--base-color);
+            }
+          }
+
+          .note-icon-menu-check {
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .note-palette {
+    .note-color-reset {
+      &:hover {
+        color: var(--default-font-color);
+        background-color: var(--base-color);
+      }
+    }
+  }
+
+  .note-editable {
+    padding: 1rem !important;
+    color: var(--default-font-color) !important;
+    background-color: var(--form-control-bg) !important;
+
+    &.card-block {
+      &::-webkit-scrollbar {
+        width: $default-scrollbar-width;
+        height: $default-scrollbar-width;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 5px;
+      }
+
+      &:hover {
+        &::-webkit-scrollbar-thumb {
+          background: var(--scrollbar-thumb-color);
+
+          &:hover {
+            background-color: var(--scrollbar-thumb-hover-color);
+          }
+        }
+      }
+    }
+  }
+
+  .note-codable {
+    height: 300px !important;
+
+    &::-webkit-scrollbar {
+      width: $default-scrollbar-width;
+      height: $default-scrollbar-width;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb-color);
+
+        &:hover {
+          background-color: var(--scrollbar-thumb-hover-color);
+        }
+      }
+    }
+
+  }
+
+  .note-placeholder {
+    padding: 1rem !important;
+  }
+
+  .note-statusbar {
+    background-color: var(--default-border-color) !important;
+    border-bottom-left-radius: $default-radius !important;
+    border-bottom-right-radius: $default-radius !important;
+    border-top: 1px solid var(--default-border-color) !important;
+  }
+}
+
+// File Upload Design
+.custom-file {
+  &:focus {
+    outline: none !important;
+  }
+
+  .custom-file-input {
+    z-index: 1;
+    height: auto;
+
+    &:focus ~ .custom-file-label {
+      border-color: var(--default-border-color) !important;
+    }
+
+    &:disabled ~ .custom-file-label {
+      pointer-events: none;
+      background-color: var(--bg-input-readonly);
+    }
+  }
+
+  .custom-file-label {
+    z-index: 2;
+    height: auto;
+    padding: 8px 14px !important;
+    line-height: 1.5;
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--default-border-color);
+    font-size: 100% !important;
+    background-color: var(--form-control-bg);
+
+    &:focus {
+      border-color: var(--default-border-color);
+    }
+
+    &::after {
+      cursor: pointer;
+      font-family: $type-1;
+      padding: 10px 14px !important;
+      line-height: 1.5;
+      height: auto;
+      background: $brand-color;
+      color: $white;
+    }
+  }
+}
+
+// Vue Telephone Input
+.vue-tel-input {
+  border-radius: 5px !important;
+  border-color: var(--default-border-color) !important;
+
+  &:focus, &:focus-within {
+    box-shadow: none !important;
+    border-color: $brand-color !important;
+  }
+
+  .vti__dropdown {
+    border-radius: 5px 0 0 5px !important;
+    padding: 10px 14px !important;
+    background-color: var(--form-control-bg) !important;
+
+    &:focus {
+      outline: none !important;
+    }
+
+    .vti__dropdown-list {
+      border-color: var(--default-border-color) !important;
+      background-color: var(--form-control-bg) !important;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: var(--scrollbar-thumb-color);
+      }
+
+      .vti__dropdown-item {
+        font-size: 95% !important;
+        color: $forms-input-text-color !important;
+        padding: 1rem 2rem 1rem 2rem !important;
+
+        &.highlighted {
+          color: $forms-input-text-color !important;
+          background-color: var(--base-color) !important;
+        }
+      }
+    }
+  }
+
+  .vti__input {
+    border-radius: 0 5px 5px 0 !important;
+    background-color: var(--form-control-bg) !important;
+  }
+}

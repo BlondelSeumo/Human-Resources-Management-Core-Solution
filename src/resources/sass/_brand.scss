@@ -1,0 +1,70 @@
+@import "core/variables";
+.btn{
+  &.btn-primary{
+    background-color: $brand-color;
+    border-color: $brand-color;
+
+    &:hover {
+      background-color: darken($brand-color, 6%);
+    }
+  }
+  &.btn-outline-primary {
+    color: $brand-color;
+    border-color: $brand-color;
+
+    &:hover {
+      color: $white;
+      background-color: $brand-color;
+    }
+
+    &:disabled {
+      &:hover {
+        color: $brand-color;
+      }
+    }
+  }
+  &.btn-transparent-primary {
+    color: $brand-color;
+
+    &:hover {
+      color: $white;
+      background-color: $brand-color;
+    }
+  }
+}
+.tab-filter-menu{
+  .nav-item{
+    .nav-link{
+      &.active {
+        color: $brand-color;
+      }
+
+      &:hover {
+        color: $brand-color;
+      }
+    }
+  }
+}
+a{
+  color: $brand-color;
+  &:hover{
+    color: darken($brand-color, 6%);
+  }
+}
+.sidebar .nav .nav-item {
+  &.active{
+    .nav-link{
+      .menu-title{
+        color: $white;
+      }
+      .icon-wrapper{
+        svg{
+          color: $white;
+        }
+      }
+    }
+  }
+}
+.text-primary{
+  color: $brand-color !important;
+}

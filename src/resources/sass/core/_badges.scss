@@ -1,0 +1,124 @@
+@import "variables";
+@import "theme-colors";
+
+/*Badges*/
+.badge {
+  color: $white;
+  font-size: 12px;
+  padding: 0.55rem 1.2rem;
+
+  &.badge-pill {
+    border-radius: 20px !important;
+  }
+
+  &.badge-circle {
+    padding: 0;
+    width: 29px;
+    max-width: 29px;
+    height: 29px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+  }
+
+  &.badge-lg {
+    font-size: 14px;
+    padding: 0.7rem 1.5rem;
+
+    &.badge-circle {
+      padding: 0;
+      width: 35px;
+      max-width: 35px;
+      height: 35px;
+    }
+  }
+
+  &.badge-sm {
+    font-size: 11px;
+    padding: 0.45rem 1rem;
+
+    &.badge-circle {
+      padding: 0;
+      width: 25px;
+      max-width: 25px;
+      height: 25px;
+    }
+  }
+
+  &.badge-primary {
+    background-color: $brand-color;
+  }
+
+  &.badge-purple {
+    background-color: $light-purple;
+  }
+
+  &.badge-warning {
+    background-color: $warning-color;
+  }
+
+  &.badge-danger {
+    background-color: $danger-color;
+  }
+
+  &.badge-light {
+    color: var(--default-font-color);
+    background-color: var(--base-color);
+  }
+
+  &.badge-info {
+    background-color: $info-color;
+  }
+
+  &.badge-secondary {
+    background-color: $default-secondary-color;
+  }
+
+  &.badge-muted {
+    background-color: $muted-color;
+  }
+}
+
+/*Notes*/
+.note-title {
+  svg {
+    color: $yellow;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.note {
+  border-radius: $default-radius;
+
+  &.note-warning {
+    background-color: var(--note-bg-color);
+    color: $sidebar-dark-menu-color !important;
+  }
+
+  &.note-blue {
+    color: var(--note-font-color);
+    background-color: $note-bg-blue-color;
+  }
+
+  &.note-red {
+    color: var(--note-font-color);
+    background-color: $note-bg-red-color;
+  }
+
+  &.note-purple {
+    color: var(--note-font-color);
+    background-color: $note-bg-purple-color;
+  }
+
+  &.note-success {
+    color: var(--note-font-color);
+    background-color: $note-bg-success-color;
+  }
+
+  &.note-info {
+    color: var(--note-font-color);
+    background-color: $note-bg-info-color;
+  }
+}

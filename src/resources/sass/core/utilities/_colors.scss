@@ -1,0 +1,74 @@
+@import '../variables';
+@import '../theme-colors';
+
+.bg-brand-color {
+  background-color: $brand-color !important;
+}
+
+.bg-disabled {
+  background-color: $muted-color !important;
+}
+
+.bg-inactive {
+  background-color: $muted-color !important;
+}
+
+.primary-text-color {
+  color: $brand-color !important;
+}
+
+.primary-card-color {
+  background-color: var(--default-card-bg) !important;
+}
+
+.default-font-color {
+  color: var(--default-font-color) !important;
+}
+
+.default-base-color {
+  background-color: var(--base-color);
+}
+
+.white-base-color {
+  background-color: var(--white-base-color);
+}
+
+.text-muted {
+  color: $muted-color !important;
+}
+
+.bg-muted {
+  background-color: $muted-color !important;
+}
+
+.text-success {
+  color: $success-color !important;
+}
+
+.bg-success {
+  background-color: $success-color !important;
+}
+
+.text-info {
+  color: $info-color !important;
+}
+
+.bg-info {
+  background-color: $info-color !important;
+}
+
+.text-warning {
+  color: $warning-color !important;
+}
+
+.bg-warning {
+  background-color: $warning-color !important;
+}
+
+.text-danger {
+  color: $danger-color !important;
+}
+
+.bg-danger {
+  background-color: $danger-color !important;
+}

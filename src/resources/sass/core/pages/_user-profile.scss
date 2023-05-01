@@ -1,0 +1,136 @@
+@import "../variables";
+
+.user-profile {
+  .user-header-media {
+    .profile-pic-wrapper {
+      width: 265px;
+
+      .custom-image-upload-wrapper {
+        width: 131px;
+        height: 131px;
+        box-shadow: var(--default-box-shadow);
+
+        .image-area {
+          width: 131px;
+          height: 131px;
+
+          img {
+            object-fit: cover;
+            height: 131px !important;
+            width: 131px !important;
+          }
+        }
+      }
+    }
+
+    .user-info-header {
+      h4 {
+        .user-status {
+          font-size: 10px;
+          margin-left: auto;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .user-details {
+    .media {
+      svg {
+        width: 30px;
+        height: 30px;
+        stroke-width: 1px;
+        color: $brand-color;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .user-header-media {
+      display: block;
+
+      .profile-pic-wrapper {
+        width: initial;
+
+        .custom-image-upload-wrapper {
+          margin: 0 auto 2rem auto;
+        }
+      }
+    }
+
+    .border-right {
+      &.custom {
+        border: 0 !important;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .user-header-media {
+      display: block;
+
+      .profile-pic-wrapper {
+        width: initial;
+
+        .custom-image-upload-wrapper {
+          margin: 0 auto 2rem auto;
+        }
+      }
+    }
+
+    .border-right {
+      &.custom {
+        border: 0 !important;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .user-header-media {
+      display: flex;
+
+      .profile-pic-wrapper {
+        width: 200px;
+
+        .custom-image-upload-wrapper {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .border-right {
+      &.user-header-media, &.user-info-header, &.custom {
+        border: 0 !important;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .user-header-media {
+      display: block;
+      text-align: center;
+
+      .profile-pic-wrapper {
+        width: initial;
+
+        .custom-image-upload-wrapper {
+          margin: 0 auto 2rem auto;
+        }
+      }
+
+      .user-info-header {
+        h4 {
+          .user-status {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    .border-right {
+      &.user-header-media, &.user-info-header, &.custom {
+        border: 0 !important;
+      }
+    }
+  }
+}

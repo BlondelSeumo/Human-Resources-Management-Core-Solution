@@ -1,0 +1,200 @@
+@import "variables";
+@import "theme-colors";
+
+.dropdown {
+  .dropdown-toggle {
+    &:after {
+      border: 0;
+      content: '';
+      width: auto;
+      height: auto;
+      font-size: .75rem;
+      vertical-align: baseline;
+    }
+  }
+
+  .dropdown-menu {
+    border: 0;
+    left: inherit;
+    margin-top: 0.75rem;
+    font-size: $default-font-size;
+    color: var(--default-font-color);
+    background-color: var(--dropdown-menu-bg);
+    box-shadow: var(--default-box-shadow);
+
+    .dropdown-divider {
+      margin: 0;
+      border-color: var(--default-border-color);
+    }
+
+    .dropdown-item {
+      font-size: inherit;
+      padding: 0.35rem 1.5rem;
+      color: var(--default-font-color);
+      transition: $default-transition-duration $action-transition-timing-function;
+
+      &:active {
+        background: initial;
+      }
+
+      &:hover {
+        color: $brand-color;
+        background-color: var(--base-color);
+      }
+    }
+
+    &.dropdown-menu-center {
+      right: auto !important;
+      left: 50% !important;
+      -webkit-transform: translate(-50%, 0) !important;
+      -o-transform: translate(-50%, 0) !important;
+      transform: translate(-50%, 0) !important;
+    }
+  }
+
+  // Dropdown button
+  &.btn-dropdown {
+    .dropdown-toggle {
+      box-shadow: var(--default-box-shadow);
+
+      &:after {
+        border: 0;
+        content: '\f078';
+        margin-left: 0.95em;
+        display: inline-block;
+        vertical-align: inherit;
+        transition: all $default-transition-duration $action-transition-timing-function;
+        font: normal normal 700 $dropdown-arrow-font-size/1 'Font Awesome 5 Free';
+      }
+
+      &[aria-expanded="true"] {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .dropdown-menu {
+      margin-top: 0.25rem;
+    }
+
+    &.show {
+      .btn-light {
+        &.dropdown-toggle {
+          color: var(--default-font-color);
+          border-color: var(--btn-light-bg);
+          background-color: var(--btn-light-bg);
+        }
+      }
+    }
+  }
+
+  // Dropdown action button
+  &.options-dropdown {
+    .btn-option {
+      padding: 0;
+      width: 31px;
+      height: 30px;
+      border-radius: 50%;
+      color: $brand-color;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      &:hover {
+        background-color: var(--icon-hover-bg);
+      }
+    }
+  }
+
+  // Tenant manager dropdown
+  &.btn-tenant-dropdown {
+    .btn {
+      font-size: $default-font-size;
+      border-radius: $default-radius;
+      box-shadow: none !important;
+      background-color: var(--base-color);
+
+      &:hover {
+        color: var(--default-font-color);
+      }
+    }
+
+    .dropdown-menu {
+      min-width: 15rem;
+      @extend .dropdownAnimation;
+
+      &:before {
+        width: 0;
+        height: 0;
+        content: '';
+        z-index: 2;
+        position: absolute;
+        top: -7px;
+        right: inherit;
+        left: 15px;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid var(--dropdown-menu-bg);
+      }
+
+      .dropdown-item {
+        white-space: initial;
+
+        &.dropdown-title {
+          padding: 1.5rem;
+        }
+      }
+
+      .tenant-items {
+        padding: 0.5rem 0;
+
+        .dropdown-item {
+          padding: 0.75rem 1.5rem;
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      .btn {
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+// Animation
+.dropdown-with-animation {
+  .dropdown-menu {
+    @extend .dropdownAnimation;
+
+    &.show {
+      top: 100% !important;
+    }
+  }
+
+  .dropdown-menu[x-placement^="left"],
+  .dropdown-menu[x-placement^="right"],
+  .dropdown-menu[x-placement^="top"] {
+    top: auto !important;
+    -webkit-animation: none !important;
+    animation: none !important;
+  }
+
+  .dropdown-menu[x-placement^="bottom-start"] {
+    margin-top: 7px !important;
+  }
+
+  .dropdown-menu[x-placement^="top-start"] {
+    top: 0 !important;
+    margin-bottom: 7px !important;
+  }
+}

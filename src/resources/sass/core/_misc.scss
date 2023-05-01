@@ -1,0 +1,222 @@
+@import "variables";
+@import "theme-colors";
+
+body, html {
+  overflow-x: hidden;
+  font-family: $type-1;
+  padding-right: 0 !important;
+  font-size: $default-font-size;
+  color: var(--default-font-color);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: lightgray;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 5px;
+  }
+}
+
+*:-moz-full-screen,
+*:-webkit-full-screen,
+*:fullscreen *:-ms-fullscreen {
+  overflow: auto;
+}
+
+a {
+  text-decoration: none !important;
+
+  &.text-muted {
+    &:hover {
+      color: $brand-color !important;
+    }
+  }
+}
+
+hr {
+  border-color: var(--default-border-color);
+}
+
+span {
+  font-size: $default-font-size;
+}
+
+.custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: $default-scrollbar-width;
+    height: $default-scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-thumb-color);
+
+      &:hover {
+        background-color: var(--scrollbar-thumb-hover-color);
+      }
+    }
+  }
+}
+
+.container-scroller {
+  overflow: hidden;
+  min-height: 105vh;
+  background-color: var(--base-color);
+}
+
+.disabled {
+  opacity: 0.6 !important;
+  pointer-events: none !important;
+}
+
+.loading-opacity {
+  opacity: 0.4;
+}
+
+.h-fit-content {
+  height: fit-content;
+}
+
+.justify-content-flex-end {
+  justify-content: flex-end;
+}
+
+.schedule-divider {
+  &:before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    margin: 0 10px 0 8px;
+    display: inline-block;
+    background-color: $muted-color;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.cursor-grab {
+  cursor: grab !important;
+}
+
+// Height - Width
+@for $i from 1 through 500 {
+  .width-#{$i} {
+    width: #{$i}px !important;
+  }
+  .min-width-#{$i} {
+    min-width: #{$i}px !important;
+  }
+  .max-width-#{$i} {
+    max-width: #{$i}px !important;
+  }
+  .height-#{$i} {
+    height: #{$i}px !important;
+  }
+  .min-height-#{$i} {
+    min-height: #{$i}px !important;
+  }
+  .max-height-#{$i} {
+    max-height: #{$i}px !important;
+  }
+}
+
+// Border Radius
+@for $i from 1 through 100 {
+  .radius-#{$i} {
+    border-radius: #{$i}px !important;
+  }
+  .radius-top-#{$i} {
+    border-radius: #{$i}px #{$i}px 0 0 !important;
+  }
+  .radius-right-#{$i} {
+    border-radius: 0 #{$i}px #{$i}px 0 !important;
+  }
+  .radius-bottom-#{$i} {
+    border-radius: 0 0 #{$i}px #{$i}px !important;
+  }
+  .radius-left-#{$i} {
+    border-radius: #{$i}px 0 0 #{$i}px !important;
+  }
+  .radius-top-left-#{$i} {
+    border-radius: #{$i}px 0 0 0 !important;
+  }
+  .radius-top-right-#{$i} {
+    border-radius: 0 #{$i}px 0 0 !important;
+  }
+  .radius-bottom-left-#{$i} {
+    border-radius: 0 0 0 #{$i}px !important;
+  }
+  .radius-bottom-right-#{$i} {
+    border-radius: 0 0 #{$i}px 0 !important;
+  }
+}
+
+// Positioning
+@for $i from 1 through 500 {
+  .top-#{$i} {
+    top: #{$i}px !important;
+  }
+  .right-#{$i} {
+    right: #{$i}px !important;
+  }
+  .bottom-#{$i} {
+    bottom: #{$i}px !important;
+  }
+  .left-#{$i} {
+    left: #{$i}px !important;
+  }
+}
+
+// Loader Design
+.spinner-bounce {
+  &.brand-color {
+    span {
+      background-color: $brand-color !important;
+    }
+  }
+
+  &.white-color {
+    span {
+      background-color: $white !important;
+    }
+  }
+}
+
+// Override Bootstrap Class
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+  padding-left: $bootstrap-column-padding;
+  padding-right: $bootstrap-column-padding;
+}
+
+.border, .border-top, .border-right, .border-bottom, .border-left {
+  border-color: var(--default-border-color) !important;
+}
+
+.spinner-border, .spinner-grow {
+  vertical-align: middle;
+}
+
+.spinner-border {
+  border-width: 0.1em !important;
+}
+
+.shadow {
+  box-shadow: var(--default-box-shadow) !important;
+}

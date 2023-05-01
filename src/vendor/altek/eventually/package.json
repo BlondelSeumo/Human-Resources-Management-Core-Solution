@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Quetzy Garcia",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.9.2",
+    "@vuepress/plugin-back-to-top": "^1.9.2",
+    "vuepress": "^1.9.2"
+  }
+}

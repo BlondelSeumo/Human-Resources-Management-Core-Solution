@@ -1,0 +1,74 @@
+@import "variables";
+@import "theme-colors";
+
+.custom-image-upload-wrapper {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: $default-radius;
+  background-color: var(--base-color);
+
+  .image-area {
+    width: 150px;
+    height: 150px;
+    border-radius: $default-radius;
+
+    img {
+      width: auto;
+      max-height: 100%;
+      border-radius: $default-radius;
+    }
+  }
+
+  .input-area {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    padding: 5px 0;
+    background-color: rgba($black, 0.4);
+    border-bottom-left-radius: $default-radius;
+    border-bottom-right-radius: $default-radius;
+    transition: all $default-transition-duration $action-transition-timing-function;
+
+    #upload-label {
+      width: 100%;
+      font-size: 90%;
+      cursor: pointer;
+      margin-bottom: 0;
+      text-align: center;
+      color: $white !important;
+    }
+  }
+
+  &:hover {
+    .input-area {
+      opacity: 1;
+    }
+  }
+
+  &.circle {
+    overflow: hidden;
+    border-radius: 50%;
+
+    .image-area {
+      border-radius: 50%;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &.small-wrapper {
+    width: 120px;
+    height: 120px;
+
+    .image-area {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+

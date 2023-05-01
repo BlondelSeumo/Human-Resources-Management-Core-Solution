@@ -1,0 +1,29 @@
+@import "../variables";
+@import "../theme-colors";
+
+.breadcrumb {
+  background-color: transparent;
+
+  .breadcrumb-item {
+    .page-icon {
+      width: 14px;
+      height: 14px;
+      color: $brand-color;
+    }
+
+    &.page-header {
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .breadcrumb {
+    .breadcrumb-item {
+      .page-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

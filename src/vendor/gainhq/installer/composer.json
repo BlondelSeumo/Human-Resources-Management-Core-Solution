@@ -1,0 +1,41 @@
+{
+    "name": "gainhq/installer",
+    "description": "User interface install ui",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khorshed Alam",
+            "email": "khorshed@gain.media"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "Gainhq\\Installer\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "altek/eventually": "^2.0",
+        "aws/aws-sdk-php": "^3.171",
+        "erusev/parsedown": "^1.7",
+        "fideloper/proxy": "^4.0",
+        "intervention/image": "^2.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require-dev": {
+        "orchestra/testbench": "6.x-dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gainhq\\Installer\\InstallerServiceProvider"
+            ]
+        }
+    }
+}
